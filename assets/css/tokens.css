@@ -1,0 +1,238 @@
+/* ==========================================================================
+   tokens.css — дизайн-токены
+   Палитра переключается атрибутом на <html data-theme="1|2|3">.
+   Всё остальное (размеры, отступы, радиусы) общее для всех тем.
+   ========================================================================== */
+
+:root {
+  /* ---------- Типографика: текучие размеры 360px → 1440px ---------- */
+  --fs-display: clamp(2rem, 1.44rem + 2.5vw, 2.75rem);      /* 32 → 44 */
+  --fs-h2: clamp(1.625rem, 1.25rem + 1.67vw, 2.375rem);     /* 26 → 38 */
+  --fs-h3: clamp(1.125rem, 1.04rem + 0.37vw, 1.3125rem);    /* 18 → 21 */
+  --fs-lead: clamp(1.0625rem, 1rem + 0.28vw, 1.25rem);      /* 17 → 20 */
+  --fs-body: clamp(1rem, 0.98rem + 0.09vw, 1.0625rem);      /* 16 → 17 */
+  --fs-sm: 0.9375rem;                                       /* 15 */
+  --fs-xs: 0.875rem;                                        /* 14 */
+  --fs-2xs: 0.75rem;                                        /* 12 */
+  --fs-eyebrow: 0.75rem;                                    /* 12 */
+  --fs-stat: clamp(2.125rem, 1.79rem + 1.48vw, 3rem);       /* 34 → 48 */
+  --fs-price: clamp(1.75rem, 1.51rem + 1.07vw, 2.25rem);    /* 28 → 36 */
+  --fs-quote: clamp(1.1875rem, 1.1rem + 0.4vw, 1.375rem);   /* 19 → 22 */
+
+  /* ---------- Интерлиньяж ---------- */
+  --lh-display: 1.12;
+  --lh-tight: 1.24;
+  --lh-snug: 1.45;
+  --lh-body: 1.65;
+
+  /* ---------- Насыщенность ---------- */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* ---------- Шкала отступов, шаг 4px ---------- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 2.5rem;
+  --space-8: 3rem;
+  --space-9: 4rem;
+  --space-10: 6rem;
+  --space-11: 8rem;
+
+  /* ---------- Ритм макета ---------- */
+  --container: 1180px;
+  --measure: 66ch;
+  --measure-narrow: 52ch;
+  --gutter: clamp(1.25rem, 0.83rem + 1.85vw, 2.5rem);        /* 20 → 40 */
+  --section-y: clamp(3.5rem, 2.33rem + 5.19vw, 7rem);        /* 56 → 112 */
+  --section-y-sm: clamp(2.75rem, 2.03rem + 3.2vw, 4.75rem);  /* 44 → 76 */
+  --header-h: 64px;
+
+  /* ---------- Радиусы ---------- */
+  --r-xs: 4px;
+  --r-sm: 8px;
+  --r-md: 10px;
+  --r-btn: 12px;
+  --r-lg: 16px;
+  --r-xl: 24px;
+  --r-pill: 999px;
+
+  /* ---------- Движение ---------- */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --dur-1: 0.18s;
+  --dur-2: 0.3s;
+  --dur-3: 0.6s;
+  --reveal-delay: 0ms;
+
+  /* ---------- Границы ---------- */
+  --bw: 1px;
+}
+
+/* ==========================================================================
+   ТЕМА 1 — «Тихая гавань»
+   тёплый бежевый + глубокий синий + терракота
+   ========================================================================== */
+:root,
+[data-theme="1"] {
+  color-scheme: light;
+
+  --font-display: "Playfair Display", "PT Serif", Georgia, "Times New Roman", serif;
+  --font-text: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+  --display-weight: 600;
+  --display-ls: -0.018em;
+  --nav-weight: 500;
+
+  --bg: #f7f2ea;
+  --bg-soft: #f1e9dd;
+  --bg-tint: #ece0d0;
+  --surface: #ffffff;
+  --surface-alt: #fbf8f2;
+
+  --ink: #17233a;
+  --ink-2: #2f3b50;
+  --muted: #6b6357;
+
+  --line: #e2d7c8;
+  --line-strong: #cfc0ac;
+
+  --accent: #a94e2e;
+  --accent-hover: #8f3f24;
+  --accent-active: #7a351d;
+  --accent-ink: #ffffff;
+  --accent-soft: #f0ded3;
+  --accent-soft-ink: #8a3e23;
+  --accent-line: #d9b6a3;
+
+  --dark: #17233a;
+  --dark-2: #1d2c47;
+  --dark-ink: #f7f2ea;
+  --dark-muted: #a9a294;
+  --dark-line: rgba(247, 242, 234, 0.16);
+  --dark-accent: #d9a05f;
+  --dark-accent-soft: rgba(217, 160, 95, 0.14);
+
+  --gold: #b98a4b;
+  --gold-ink: #96682f;
+  --focus: #a94e2e;
+
+  --shadow-xs: 0 1px 2px rgba(20, 28, 44, 0.05);
+  --shadow-sm: 0 2px 10px -3px rgba(20, 28, 44, 0.12), 0 1px 2px rgba(20, 28, 44, 0.05);
+  --shadow-md: 0 14px 36px -16px rgba(20, 28, 44, 0.24);
+  --shadow-lg: 0 34px 84px -26px rgba(12, 19, 32, 0.42);
+  --scrim: rgba(18, 25, 39, 0.74);
+}
+
+/* ==========================================================================
+   ТЕМА 2 — «Тихая точность»
+   молочно-белый + графит + приглушённый изумруд
+   PT Serif / PT Sans — гарнитуры, нарисованные под кириллицу
+   ========================================================================== */
+[data-theme="2"] {
+  color-scheme: light;
+
+  --font-display: "PT Serif", "Lora", Georgia, "Times New Roman", serif;
+  --font-text: "PT Sans", "Inter", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+
+  --display-weight: 700;
+  --display-ls: -0.008em;
+  --nav-weight: 700;
+
+  --bg: #fbfaf7;
+  --bg-soft: #f3f2ee;
+  --bg-tint: #eae9e3;
+  --surface: #ffffff;
+  --surface-alt: #f8f8f5;
+
+  --ink: #23262a;
+  --ink-2: #3a3f45;
+  --muted: #6c6f73;
+
+  --line: #e3e2dd;
+  --line-strong: #cdcdc6;
+
+  --accent: #1f5d4b;
+  --accent-hover: #17493b;
+  --accent-active: #113a2e;
+  --accent-ink: #ffffff;
+  --accent-soft: #dce8e3;
+  --accent-soft-ink: #17493b;
+  --accent-line: #b7cfc5;
+
+  --dark: #1e2422;
+  --dark-2: #252d2a;
+  --dark-ink: #f4f6f3;
+  --dark-muted: #a7b0ab;
+  --dark-line: rgba(244, 246, 243, 0.15);
+  --dark-accent: #8fc7ae;
+  --dark-accent-soft: rgba(143, 199, 174, 0.14);
+
+  --gold: #b08d4f;
+  --gold-ink: #8a6a30;
+  --focus: #1f5d4b;
+
+  --shadow-xs: 0 1px 2px rgba(24, 28, 26, 0.05);
+  --shadow-sm: 0 2px 10px -3px rgba(24, 28, 26, 0.11), 0 1px 2px rgba(24, 28, 26, 0.05);
+  --shadow-md: 0 14px 36px -16px rgba(24, 28, 26, 0.2);
+  --shadow-lg: 0 34px 84px -26px rgba(14, 18, 16, 0.38);
+  --scrim: rgba(20, 26, 24, 0.74);
+}
+
+/* ==========================================================================
+   ТЕМА 3 — «Сдержанная печать»
+   светло-серый + бордо + золотисто-песочный
+   ========================================================================== */
+[data-theme="3"] {
+  color-scheme: light;
+
+  --font-display: "Lora", "PT Serif", Georgia, "Times New Roman", serif;
+  --font-text: "Manrope", "Inter", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+
+  --display-weight: 600;
+  --display-ls: -0.012em;
+  --nav-weight: 600;
+
+  --bg: #f2f1ee;
+  --bg-soft: #e9e7e2;
+  --bg-tint: #dfdcd6;
+  --surface: #ffffff;
+  --surface-alt: #faf9f7;
+
+  --ink: #232024;
+  --ink-2: #3b3539;
+  --muted: #6c6569;
+
+  --line: #dcd8d1;
+  --line-strong: #c6c0b8;
+
+  --accent: #6e2033;
+  --accent-hover: #571826;
+  --accent-active: #45121d;
+  --accent-ink: #ffffff;
+  --accent-soft: #eddcdf;
+  --accent-soft-ink: #6e2033;
+  --accent-line: #d3b3b9;
+
+  --dark: #2a2226;
+  --dark-2: #332a2e;
+  --dark-ink: #f6f1ef;
+  --dark-muted: #b3a6a9;
+  --dark-line: rgba(246, 241, 239, 0.15);
+  --dark-accent: #d6b06a;
+  --dark-accent-soft: rgba(214, 176, 106, 0.14);
+
+  --gold: #b4893c;
+  --gold-ink: #9a6f26;
+  --focus: #6e2033;
+
+  --shadow-xs: 0 1px 2px rgba(36, 30, 33, 0.05);
+  --shadow-sm: 0 2px 10px -3px rgba(36, 30, 33, 0.12), 0 1px 2px rgba(36, 30, 33, 0.05);
+  --shadow-md: 0 14px 36px -16px rgba(36, 30, 33, 0.22);
+  --shadow-lg: 0 34px 84px -26px rgba(20, 15, 18, 0.4);
+  --scrim: rgba(28, 23, 26, 0.76);
+}

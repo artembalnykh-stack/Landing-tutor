@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="1">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Татьяна Павловна — репетитор по русскому языку | 5–11 классы, ЕГЭ и ОГЭ</title>
+  <meta name="description" content="Индивидуальные занятия по русскому языку с педагогом со стажем 30 лет. Подготовка к ЕГЭ и ОГЭ, сочинения без страха, 800+ учеников. Первое занятие бесплатно.">
+  <meta name="theme-color" content="#f7f2ea">
+  <link rel="canonical" href="https://example.ru/"><!-- TODO: заменить на реальный домен -->
+  <meta property="og:url" content="https://example.ru/"><!-- TODO: заменить на реальный домен -->
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Татьяна Павловна — репетитор по русскому языку">
+  <meta property="og:description" content="Русский язык без зубрёжки, слёз над сочинениями и страха перед ЕГЭ. 30 лет практики, 800+ учеников. Первое занятие бесплатно.">
+  <meta property="og:image" content="assets/img/og-cover.png"><!-- TODO: после публикации указать абсолютный URL -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="assets/img/og-cover.png">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/landing.css">
+
+  <script>
+    document.documentElement.classList.add('js');
+    /* Страховка: если main.js не загрузился, контент всё равно покажется */
+    window.setTimeout(function () {
+      if (!window.__revealReady) document.documentElement.classList.remove('js');
+    }, 2500);
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Татьяна Павловна",
+    "jobTitle": "Репетитор по русскому языку",
+    "description": "Практикующий педагог с 30-летним стажем. Подготовка к ЕГЭ и ОГЭ, школьная программа 5–11 классов.",
+    "telephone": "+79060000000",
+    "areaServed": "Москва",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "МПГУ им. В. И. Ленина"
+    },
+    "knowsAbout": ["Русский язык", "Литература", "Подготовка к ЕГЭ", "Подготовка к ОГЭ"]
+  }
+  </script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Перейти к содержанию</a>
+
+<!-- ============ Спрайт иконок ============ -->
+<svg class="sprite" aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
+  <symbol id="i-trending-down" viewBox="0 0 24 24"><path d="M22 17 13.5 8.5 8.5 13.5 2 7"/><path d="M16 17h6v-6"/></symbol>
+  <symbol id="i-shuffle" viewBox="0 0 24 24"><path d="M16 3h5v5"/><path d="M4 20 21 3"/><path d="M21 16v5h-5"/><path d="m15 15 6 6"/><path d="m4 4 5 5"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></symbol>
+  <symbol id="i-book-open" viewBox="0 0 24 24"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-check-circle" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></symbol>
+  <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m11 6-6 6 6 6"/></symbol>
+  <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2 11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-grad-cap" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.657 2.686 3 6 3s6-1.343 6-3v-5"/></symbol>
+  <symbol id="i-file-text" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></symbol>
+  <symbol id="i-shield-check" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-zoom-in" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6"/><path d="M8 11h6"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-monitor" viewBox="0 0 24 24"><path d="M20 3H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"/><path d="M8 21h8"/><path d="M12 17v4"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><path d="M20 12v10H4V12"/><path d="M2 7h20v5H2z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M21 2v6h-6"/><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M3 22v-6h6"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></symbol>
+</svg>
+
+<!-- ============ Шапка ============ -->
+<header class="site-header" id="site-header">
+  <div class="container header__inner">
+    <a class="brand" href="#top">
+      <span class="brand__mark" aria-hidden="true">ТП</span>
+      <span class="brand__text">
+        <span class="brand__name">Татьяна Павловна</span>
+        <span class="brand__role">Репетитор по русскому языку</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Основная навигация">
+      <a class="nav__link" href="#about">Обо мне</a>
+      <a class="nav__link" href="#method">Методика</a>
+      <a class="nav__link" href="#diplomas">Дипломы</a>
+      <a class="nav__link" href="#prices">Цены</a>
+      <a class="nav__link" href="#faq">Вопросы</a>
+    </nav>
+
+    <div class="header__actions">
+      <a class="btn btn--primary btn--sm header__cta" href="#contacts">Пробное занятие</a>
+      <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Открыть меню">
+        <span class="burger__box" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ Мобильное меню ============ -->
+<div class="menu" id="menu" aria-hidden="true">
+  <nav class="menu__nav" aria-label="Мобильная навигация">
+    <a class="menu__link" href="#about"><span class="menu__num">01</span>Обо мне</a>
+    <a class="menu__link" href="#education"><span class="menu__num">02</span>Квалификация</a>
+    <a class="menu__link" href="#method"><span class="menu__num">03</span>Методика</a>
+    <a class="menu__link" href="#diplomas"><span class="menu__num">04</span>Дипломы</a>
+    <a class="menu__link" href="#prices"><span class="menu__num">05</span>Цены</a>
+    <a class="menu__link" href="#faq"><span class="menu__num">06</span>Вопросы</a>
+  </nav>
+
+  <div class="menu__foot">
+    <a class="btn btn--primary btn--lg btn--block" href="#contacts">Записаться на пробное</a>
+    <!-- TODO: заменить на реальный номер телефона -->
+    <a class="menu__phone" href="tel:+79060000000">
+      <svg class="icon icon--sm" aria-hidden="true"><use href="#i-phone"/></svg>
+      +7 906-ХХХ-ХХ-ХХ
+    </a>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- ==========================================================
+       1. Первый экран
+       ========================================================== -->
+  <section class="hero" id="top">
+    <div class="container hero__grid">
+
+      <div class="hero__content">
+        <p class="eyebrow hero__eyebrow">Репетитор по русскому языку · Школьники 5–11 классов</p>
+
+        <h1 class="hero__title">Русский язык <em>без зубрёжки</em>, слёз над сочинениями и страха перед ЕГЭ</h1>
+
+        <p class="lead hero__lead">Индивидуальные занятия с педагогом, который за 30 лет нашёл подход к тысячам учеников. Ваш ребёнок начнёт писать грамотно и перестанет бояться экзаменов.</p>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary btn--lg" href="#contacts">Записаться на пробное занятие</a>
+          <a class="btn btn--ghost btn--lg" href="#prices">Посмотреть цены</a>
+        </div>
+
+        <p class="hero__micro">
+          <span><svg class="icon" aria-hidden="true"><use href="#i-gift"/></svg>Первое занятие бесплатно</span>
+          <span><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>30 минут</span>
+          <span><svg class="icon" aria-hidden="true"><use href="#i-monitor"/></svg>Онлайн или очно в Москве</span>
+        </p>
+      </div>
+
+      <div class="hero__media">
+        <figure class="hero__figure" data-photo>
+          <!-- Синтетическое фото: реальный человек не изображён, права третьих лиц не нарушаются -->
+          <img src="assets/img/teacher-portrait.jpg" alt="Портрет Татьяны Павловны, преподавателя русского языка. Синтетическое изображение, не фотография реального человека" width="1402" height="1122" fetchpriority="high" decoding="async">
+        </figure>
+
+        <div class="hero__badge">
+          <span class="icon-box icon-box--sm" aria-hidden="true">
+            <svg class="icon"><use href="#i-grad-cap"/></svg>
+          </span>
+          <span class="hero__badge-text">
+            <span class="hero__badge-title">МПГУ им. В. И. Ленина</span>
+            <span class="hero__badge-sub">Диплом с отличием</span>
+          </span>
+        </div>
+      </div>
+
+      <ul class="hero__trust">
+        <li class="stat">
+          <span class="stat__value">30 лет</span>
+          <span class="stat__label">педагогического стажа</span>
+        </li>
+        <li class="stat">
+          <span class="stat__value">800+</span>
+          <span class="stat__label">учеников</span>
+        </li>
+        <li class="stat">
+          <span class="stat__value">92%</span>
+          <span class="stat__label">сдают ЕГЭ на 75+ баллов</span>
+        </li>
+      </ul>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       2. Проблематика
+       ========================================================== -->
+  <section class="section section--soft" id="problems">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Знакомо?</p>
+        <h2>Знакомые ситуации?</h2>
+      </div>
+
+      <ul class="problems__list" data-stagger>
+        <li class="problem reveal">
+          <span class="icon-box icon-box--sm" aria-hidden="true"><svg class="icon"><use href="#i-trending-down"/></svg></span>
+          <div class="problem__body">
+            <h3 class="problem__title">Оценки скатываются</h3>
+            <p class="problem__text">Диктанты на тройки, сочинения переписываются по пять раз.</p>
+          </div>
+        </li>
+        <li class="problem reveal">
+          <span class="icon-box icon-box--sm" aria-hidden="true"><svg class="icon"><use href="#i-shuffle"/></svg></span>
+          <div class="problem__body">
+            <h3 class="problem__title">«Я просто не понимаю правила»</h3>
+            <p class="problem__text">Падежи, причастные обороты, пунктуация — всё смешалось в голове.</p>
+          </div>
+        </li>
+        <li class="problem reveal">
+          <span class="icon-box icon-box--sm" aria-hidden="true"><svg class="icon"><use href="#i-alert"/></svg></span>
+          <div class="problem__body">
+            <h3 class="problem__title">Страх перед ЕГЭ и ОГЭ</h3>
+            <p class="problem__text">Ребёнок паникует при слове «изложение» или «сочинение по тексту».</p>
+          </div>
+        </li>
+        <li class="problem reveal">
+          <span class="icon-box icon-box--sm" aria-hidden="true"><svg class="icon"><use href="#i-book-open"/></svg></span>
+          <div class="problem__body">
+            <h3 class="problem__title">Прошлые репетиторы не помогли</h3>
+            <p class="problem__text">Зубрили правила наизусть, а понимания так и не появилось.</p>
+          </div>
+        </li>
+      </ul>
+
+      <p class="callout problems__summary reveal">
+        <svg class="icon callout__icon" aria-hidden="true"><use href="#i-check-circle"/></svg>
+        Если узнали хотя бы один пункт — я знаю, как это исправить.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       3. Обо мне
+       ========================================================== -->
+  <section class="section" id="about">
+    <div class="container about__grid">
+
+      <figure class="about__media reveal">
+        <div class="about__figure" data-photo>
+          <img src="assets/img/about-desk.svg" alt="Рабочий стол преподавателя: раскрытая тетрадь, книги, очки и чашка чая" width="1000" height="1250" loading="lazy" decoding="async">
+        </div>
+        <figcaption class="about__caption">Татьяна Павловна · педагог, МПГУ им. В. И. Ленина</figcaption>
+      </figure>
+
+      <div class="about__content">
+        <div class="section-head reveal" style="margin-bottom:0">
+          <p class="eyebrow">Обо мне</p>
+          <h2>Здравствуйте, меня зовут Татьяна Павловна</h2>
+        </div>
+
+        <div class="about__text reveal">
+          <p>Я практикующий педагог с 30-летним стажем. Окончила Московский педагогический государственный университет (МПГУ) им. В. И. Ленина по специальности «Русский язык и литература».</p>
+          <p>За три десятилетия в школе и частной практике я помогла более чем 800 ученикам: кто-то подтянул оценки, кто-то сдал ЕГЭ на 85+ баллов, а кто-то просто перестал бояться русского и полюбил его.</p>
+          <p>Мой подход — это не бесконечные таблицы правил. Я учу видеть язык: понимать логику, чувствовать фразу, грамотно выражать мысли. И да, я умею находить общий язык даже с самыми «закрытыми» подростками.</p>
+        </div>
+
+        <ul class="about__stats reveal">
+          <li class="stat">
+            <span class="stat__value">30 лет</span>
+            <span class="stat__label">педагогического стажа</span>
+          </li>
+          <li class="stat">
+            <span class="stat__value">800+</span>
+            <span class="stat__label">учеников</span>
+          </li>
+          <li class="stat">
+            <span class="stat__value">92%</span>
+            <span class="stat__label">выпускников сдают ЕГЭ на 75+ баллов</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       4. Образование и квалификации
+       ========================================================== -->
+  <section class="section section--soft" id="education">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Образование</p>
+        <h2>Подтверждённая квалификация</h2>
+        <p class="lead">Базовое образование + постоянное обучение современным методикам.</p>
+      </div>
+
+      <div class="edu__grid">
+        <div class="edu__base reveal">
+          <span class="icon-box" aria-hidden="true"><svg class="icon"><use href="#i-grad-cap"/></svg></span>
+          <p class="edu__base-title">Базовое образование</p>
+          <p class="edu__school">МПГУ им. В. И. Ленина</p>
+          <p class="edu__faculty">Факультет русского языка и литературы</p>
+          <p class="edu__honors">
+            <svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>
+            Диплом с отличием
+          </p>
+        </div>
+
+        <div class="edu__list reveal">
+          <h3 class="edu__list-title">Повышение квалификации</h3>
+          <ol class="timeline">
+            <li class="timeline__item">
+              <span class="chip">2021</span>
+              <p class="timeline__title">«Современные методики преподавания русского языка в школе»</p>
+              <p class="timeline__org">МПГУ</p>
+            </li>
+            <li class="timeline__item">
+              <span class="chip">2023</span>
+              <p class="timeline__title">«Подготовка к ЕГЭ по русскому языку: работа с новыми форматами ФИПИ»</p>
+              <p class="timeline__org">Институт развития образования</p>
+            </li>
+            <li class="timeline__item">
+              <span class="chip">2024</span>
+              <p class="timeline__title">«Психология подростка: как удерживать мотивацию и внимание»</p>
+              <p class="timeline__org">Онлайн-университет «Современная педагогика»</p>
+            </li>
+            <li class="timeline__item">
+              <span class="chip">2024</span>
+              <p class="timeline__title">«Интерактивные онлайн-инструменты в работе репетитора»</p>
+              <p class="timeline__org">EdTech-школа «УчиМ»</p>
+            </li>
+            <li class="timeline__item">
+              <span class="chip">2025</span>
+              <p class="timeline__title">«ИИ-ассистенты в работе педагога: нейросети для проверки, подбора заданий и обратной связи»</p>
+              <p class="timeline__org">Программа профессионального развития</p>
+            </li>
+            <li class="timeline__item">
+              <span class="chip">2026</span>
+              <p class="timeline__title">«Работа с тревожностью ученика на экзамене»</p>
+              <p class="timeline__org">Курс «Педагог.Онлайн»</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       5. Методика
+       ========================================================== -->
+  <section class="section section--dark method" id="method">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Методика</p>
+        <h2>Как проходят наши занятия</h2>
+        <p class="lead">Пять шагов, которые превращают «не понимаю» в «получается».</p>
+      </div>
+
+      <ol class="method__list" data-stagger>
+        <li class="step reveal">
+          <span class="step__num" aria-hidden="true">01</span>
+          <div class="step__body">
+            <h3 class="step__title">Знакомство и определение уровня</h3>
+            <p class="step__text">На первом занятии мы без стресса смотрим, где пробелы и как ребёнок мыслит.</p>
+          </div>
+        </li>
+        <li class="step reveal">
+          <span class="step__num" aria-hidden="true">02</span>
+          <div class="step__body">
+            <h3 class="step__title">Индивидуальный план</h3>
+            <p class="step__text">Составляем дорожную карту: что, в каком объёме и к какой дате пройдём.</p>
+          </div>
+        </li>
+        <li class="step reveal">
+          <span class="step__num" aria-hidden="true">03</span>
+          <div class="step__body">
+            <h3 class="step__title">Понятная теория + живая практика</h3>
+            <p class="step__text">Объясняю правила через смысл, а не через зубрёжку. Используем современные задания, а не устаревшие сборники.</p>
+          </div>
+        </li>
+        <li class="step reveal">
+          <span class="step__num" aria-hidden="true">04</span>
+          <div class="step__body">
+            <h3 class="step__title">Работа со стрессом</h3>
+            <p class="step__text">Учимся писать сочинения без паники, справляться с таймингом на экзамене.</p>
+          </div>
+        </li>
+        <li class="step reveal">
+          <span class="step__num" aria-hidden="true">05</span>
+          <div class="step__body">
+            <h3 class="step__title">Прозрачность для родителей</h3>
+            <p class="step__text">Регулярно рассказываю о прогрессе — вы всегда в курсе.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="method__foot reveal">
+        <p class="method__foot-text">Начнём с бесплатного знакомства: 30 минут, без обязательств.</p>
+        <a class="btn btn--light" href="#contacts">Записаться на пробное</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       6. Дипломы и сертификаты
+       ========================================================== -->
+  <section class="section" id="diplomas">
+    <div class="container">
+      <div class="section-head section-head--wide reveal">
+        <p class="eyebrow">Документы</p>
+        <h2>Документы и сертификаты</h2>
+        <p class="lead">Нажмите на документ, чтобы увеличить. Серии, номера и адреса скрыты — это сделано заранее, в самих файлах.</p>
+      </div>
+
+      <ul class="diplomas__grid" data-stagger>
+        <li class="dip reveal">
+          <button class="dip__btn" type="button"
+                  data-doc="assets/img/diplomas/doc-01.svg"
+                  data-caption="Диплом МПГУ им. В. И. Ленина · русский язык и литература · 1995 · с отличием">
+            <span class="dip__frame">
+              <img src="assets/img/diplomas/doc-01.svg" alt="Диплом МПГУ: русский язык и литература, 1995 год, с отличием" width="800" height="1131" loading="lazy" decoding="async">
+              <span class="dip__zoom" aria-hidden="true"><svg class="icon"><use href="#i-zoom-in"/></svg></span>
+            </span>
+            <span class="dip__meta">
+              <span class="dip__name">Диплом МПГУ</span>
+              <span class="dip__sub">Русский язык и литература · 1995</span>
+            </span>
+          </button>
+        </li>
+
+        <li class="dip reveal">
+          <button class="dip__btn" type="button"
+                  data-doc="assets/img/diplomas/doc-02.svg"
+                  data-caption="Удостоверение о повышении квалификации · современные методики преподавания русского языка · МПГУ · 2021">
+            <span class="dip__frame">
+              <img src="assets/img/diplomas/doc-02.svg" alt="Удостоверение о повышении квалификации: современные методики преподавания русского языка, МПГУ, 2021" width="800" height="1131" loading="lazy" decoding="async">
+              <span class="dip__zoom" aria-hidden="true"><svg class="icon"><use href="#i-zoom-in"/></svg></span>
+            </span>
+            <span class="dip__meta">
+              <span class="dip__name">Современные методики</span>
+              <span class="dip__sub">МПГУ · 2021 · 72 часа</span>
+            </span>
+          </button>
+        </li>
+
+        <li class="dip reveal">
+          <button class="dip__btn" type="button"
+                  data-doc="assets/img/diplomas/doc-03.svg"
+                  data-caption="Удостоверение о повышении квалификации · подготовка к ЕГЭ: новые форматы ФИПИ · Институт развития образования · 2023">
+            <span class="dip__frame">
+              <img src="assets/img/diplomas/doc-03.svg" alt="Удостоверение о повышении квалификации: подготовка к ЕГЭ, новые форматы ФИПИ, 2023" width="800" height="1131" loading="lazy" decoding="async">
+              <span class="dip__zoom" aria-hidden="true"><svg class="icon"><use href="#i-zoom-in"/></svg></span>
+            </span>
+            <span class="dip__meta">
+              <span class="dip__name">Подготовка к ЕГЭ</span>
+              <span class="dip__sub">Новые форматы ФИПИ · 2023</span>
+            </span>
+          </button>
+        </li>
+
+        <li class="dip reveal">
+          <button class="dip__btn" type="button"
+                  data-doc="assets/img/diplomas/doc-04.svg"
+                  data-caption="Сертификат · психология подростка: мотивация и внимание · 2024">
+            <span class="dip__frame">
+              <img src="assets/img/diplomas/doc-04.svg" alt="Сертификат: психология подростка, мотивация и внимание, 2024" width="800" height="1131" loading="lazy" decoding="async">
+              <span class="dip__zoom" aria-hidden="true"><svg class="icon"><use href="#i-zoom-in"/></svg></span>
+            </span>
+            <span class="dip__meta">
+              <span class="dip__name">Психология подростка</span>
+              <span class="dip__sub">Мотивация и внимание · 2024</span>
+            </span>
+          </button>
+        </li>
+
+        <li class="dip reveal">
+          <button class="dip__btn" type="button"
+                  data-doc="assets/img/diplomas/doc-05.svg"
+                  data-caption="Сертификат · ИИ-ассистенты в работе педагога · 2025">
+            <span class="dip__frame">
+              <img src="assets/img/diplomas/doc-05.svg" alt="Сертификат: ИИ-ассистенты в работе педагога, 2025" width="800" height="1131" loading="lazy" decoding="async">
+              <span class="dip__zoom" aria-hidden="true"><svg class="icon"><use href="#i-zoom-in"/></svg></span>
+            </span>
+            <span class="dip__meta">
+              <span class="dip__name">ИИ-ассистенты в работе</span>
+              <span class="dip__sub">Нейросети для педагога · 2025</span>
+            </span>
+          </button>
+        </li>
+
+        <li class="dip reveal">
+          <button class="dip__btn" type="button"
+                  data-doc="assets/img/diplomas/doc-06.svg"
+                  data-caption="Удостоверение о повышении квалификации · работа с тревожностью ученика на экзамене · 2026">
+            <span class="dip__frame">
+              <img src="assets/img/diplomas/doc-06.svg" alt="Удостоверение о повышении квалификации: работа с тревожностью ученика на экзамене, 2026" width="800" height="1131" loading="lazy" decoding="async">
+              <span class="dip__zoom" aria-hidden="true"><svg class="icon"><use href="#i-zoom-in"/></svg></span>
+            </span>
+            <span class="dip__meta">
+              <span class="dip__name">Тревожность на экзамене</span>
+              <span class="dip__sub">Педагог.Онлайн · 2026</span>
+            </span>
+          </button>
+        </li>
+      </ul>
+
+      <p class="diplomas__note reveal">
+        <svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>
+        <span>На сайте опубликованы только очищенные копии документов. Оригиналы с сериями и номерами высылаю в Telegram по запросу — <a href="https://t.me/username" target="_blank" rel="noopener noreferrer">написать</a>. <!-- TODO: заменить ссылку на реальный аккаунт --></span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       7. Цены
+       ========================================================== -->
+  <section class="section section--soft" id="prices">
+    <div class="container">
+      <div class="section-head section-head--center reveal">
+        <p class="eyebrow">Стоимость</p>
+        <h2>Стоимость занятий</h2>
+        <p class="lead">Прозрачные условия без скрытых доплат. Первое занятие-знакомство — бесплатно.</p>
+      </div>
+
+      <div class="prices__grid" data-stagger>
+
+        <article class="price reveal">
+          <div class="price__head">
+            <h3 class="price__name">Разовое занятие</h3>
+            <p class="price__desc">Для точечного разбора темы или консультации.</p>
+          </div>
+          <p class="price__sum">
+            <span class="price__value">3 000 ₽</span>
+            <span class="price__unit">60 минут</span>
+          </p>
+          <p class="price__meta">
+            <span class="chip chip--muted">60 минут</span>
+            <span class="chip chip--muted">Любая тема</span>
+          </p>
+          <a class="btn btn--ghost btn--block" href="#contacts">Записаться</a>
+        </article>
+
+        <article class="price price--featured reveal">
+          <span class="badge price__badge">Оптимальный выбор</span>
+          <div class="price__head">
+            <h3 class="price__name">Абонемент на 8 занятий</h3>
+            <p class="price__desc">Оптимальный формат для стабильного прогресса.</p>
+          </div>
+          <p class="price__sum">
+            <span class="price__value">21 600 ₽</span>
+            <span class="price__unit">2 700 ₽ за занятие</span>
+          </p>
+          <p class="price__meta">
+            <span class="chip">Экономия 10%</span>
+            <span class="chip chip--muted">8 занятий</span>
+          </p>
+          <a class="btn btn--primary btn--block" href="#contacts">Выбрать абонемент</a>
+        </article>
+
+        <article class="price reveal">
+          <div class="price__head">
+            <h3 class="price__name">Интенсив «ЕГЭ / ОГЭ»</h3>
+            <p class="price__desc">Системная подготовка по авторской программе.</p>
+          </div>
+          <p class="price__sum">
+            <span class="price__value">24 000 ₽</span>
+            <span class="price__unit">за месяц</span>
+          </p>
+          <p class="price__meta">
+            <span class="chip chip--muted">Авторская программа</span>
+            <span class="chip chip--muted">Подготовка к экзамену</span>
+          </p>
+          <a class="btn btn--ghost btn--block" href="#contacts">Записаться</a>
+        </article>
+
+      </div>
+
+      <div class="prices__notes reveal">
+        <p><svg class="icon" aria-hidden="true"><use href="#i-gift"/></svg>Первое занятие-знакомство (30 минут) — бесплатно.</p>
+        <p><svg class="icon" aria-hidden="true"><use href="#i-card"/></svg>Оплата по факту или за абонемент.</p>
+        <p><svg class="icon" aria-hidden="true"><use href="#i-refresh"/></svg>Переносы — по предварительной договорённости.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       8. FAQ
+       ========================================================== -->
+  <section class="section" id="faq">
+    <div class="container faq__layout">
+      <div class="section-head reveal">
+        <p class="eyebrow">Вопросы</p>
+        <h2>Частые вопросы родителей</h2>
+        <p class="lead">Если ответа нет — напишите, отвечу лично.</p>
+        <div class="faq__foot">
+          <a class="link-arrow" href="#contacts">Задать свой вопрос <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+        </div>
+      </div>
+
+      <div class="faq reveal">
+        <details class="faq__item" open>
+          <summary class="faq__q">
+            Как быстро будет виден результат?
+            <span class="faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq__panel">
+            <div class="faq__panel-inner">
+              <p>Первые улучшения — через 3–4 занятия. Для устойчивого результата и подготовки к экзамену рекомендую заниматься от 4 месяцев.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__q">
+            Что нужно для онлайн-занятия?
+            <span class="faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq__panel">
+            <div class="faq__panel-inner">
+              <p>Компьютер или планшет с камерой, интернет и тетрадь. Я использую интерактивную доску — занятия наглядные, как у доски в классе.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__q">
+            Вы даёте домашние задания?
+            <span class="faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq__panel">
+            <div class="faq__panel-inner">
+              <p>Да, но строго дозированно. Домашка — для закрепления, а не чтобы ребёнок сидел над ней часами.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__q">
+            Мой ребёнок «гуманитарий» и ненавидит русский. Вы сможете его заинтересовать?
+            <span class="faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq__panel">
+            <div class="faq__panel-inner">
+              <p>За 30 лет через мои занятия прошли самые разные ученики. Я не заставляю — я показываю язык как живую систему. И это работает.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       9. Контакты и форма
+       ========================================================== -->
+  <section class="section section--soft" id="contacts">
+    <div class="container contacts__grid">
+
+      <div class="contacts__info">
+        <div class="section-head reveal" style="margin-bottom:0">
+          <p class="eyebrow">Контакты</p>
+          <h2>Запишитесь на бесплатное пробное занятие</h2>
+          <p class="lead">Оставьте заявку — я свяжусь с вами в течение дня, чтобы подобрать удобное время для знакомства.</p>
+        </div>
+
+        <ul class="contacts__list reveal">
+          <li>
+            <!-- TODO: заменить на реальный номер телефона -->
+            <a class="contact-link" href="tel:+79060000000">
+              <span class="icon-box icon-box--sm" aria-hidden="true"><svg class="icon"><use href="#i-phone"/></svg></span>
+              <span class="contact-link__text">
+                <span class="contact-link__value">+7 906-ХХХ-ХХ-ХХ</span>
+                <span class="contact-link__label">Позвонить</span>
+              </span>
+              <svg class="icon contact-link__arrow" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+            </a>
+          </li>
+          <li>
+            <!-- TODO: заменить ссылку на реальный аккаунт Telegram -->
+            <a class="contact-link" href="https://t.me/username" target="_blank" rel="noopener noreferrer">
+              <span class="icon-box icon-box--sm" aria-hidden="true"><svg class="icon"><use href="#i-send"/></svg></span>
+              <span class="contact-link__text">
+                <span class="contact-link__value">Telegram</span>
+                <span class="contact-link__label">Написать в чат</span>
+              </span>
+              <span class="contact-link__pill">скоро</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="checklist contacts__guarantees reveal">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Отвечаю в течение дня</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Первое занятие — бесплатно</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Онлайн или очно в Москве</li>
+        </ul>
+      </div>
+
+      <div class="contacts__form reveal">
+        <p class="contacts__form-label">Заявка на пробное занятие</p>
+
+        <div class="yform" data-yform>
+          <div class="yform__skeleton" aria-hidden="true">
+            <span class="yform__spinner"></span>
+            <span class="yform__skeleton-text">Загружаем форму…</span>
+          </div>
+
+          <iframe
+            src="https://forms.yandex.ru/u/6ad9cab95057b2dcd53434df?iframe=1"
+            name="ya-form-6ad9cab95057b2dcd53434df"
+            title="Форма заявки на бесплатное пробное занятие"
+            frameborder="0"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allow="clipboard-write"></iframe>
+
+          <div class="yform__fallback">
+            <span class="icon-box icon-box--sm" aria-hidden="true"><svg class="icon"><use href="#i-send"/></svg></span>
+            <p class="yform__fallback-title">Форма откроется в новой вкладке</p>
+            <p class="yform__fallback-text">Это займёт меньше минуты. Если удобнее — позвоните, я на связи.</p>
+            <a class="btn btn--primary yform__fallback-btn" href="https://forms.yandex.ru/u/6ad9cab95057b2dcd53434df/" target="_blank" rel="noopener noreferrer">Открыть форму</a>
+            <a class="yform__fallback-call" href="tel:+79060000000">+7 906-ХХХ-ХХ-ХХ</a>
+          </div>
+        </div>
+
+        <div class="contacts__form-note">
+          <p class="contacts__form-alt">
+            <a href="https://forms.yandex.ru/u/6ad9cab95057b2dcd53434df/" target="_blank" rel="noopener noreferrer">Открыть форму в новой вкладке ↗</a>
+          </p>
+
+          <p class="contacts__privacy">
+            Нажимая кнопку, вы соглашаетесь с <a href="privacy.html">политикой конфиденциальности</a>.
+            Данные передаются в защищённую форму Яндекс.Форм и не хранятся на этом сайте.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ Подвал ============ -->
+<footer class="site-footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <span class="footer__name">Татьяна Павловна</span>
+      <span class="footer__meta">Репетитор по русскому языку · Москва</span>
+    </div>
+    <nav class="footer__links" aria-label="Подвал">
+      <a href="#about">Обо мне</a>
+      <a href="#prices">Цены</a>
+      <a href="#faq">Вопросы</a>
+      <a href="privacy.html">Политика конфиденциальности</a>
+      <a href="#top">Наверх</a>
+    </nav>
+    <p class="footer__meta">© <span id="year">2026</span> Татьяна Павловна</p>
+
+    <p class="footer__disclaimer">Демо-проект. Все совпадения случайны</p>
+
+  </div>
+</footer>
+
+<!-- ============ Липкая полоса CTA (мобайл) ============ -->
+<div class="cta-bar" id="cta-bar">
+  <a class="btn btn--primary cta-bar__btn" href="#contacts">Записаться на пробное</a>
+  <a class="cta-bar__call" href="tel:+79060000000" aria-label="Позвонить">
+    <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+  </a>
+</div>
+
+<!-- ============ Лайтбокс ============ -->
+<dialog class="lightbox" id="lightbox" aria-label="Просмотр документа">
+  <div class="lightbox__bar">
+    <span class="lightbox__counter" id="lb-counter"></span>
+    <button class="lightbox__close" type="button" id="lb-close" aria-label="Закрыть">
+      <svg class="icon" aria-hidden="true"><use href="#i-x"/></svg>
+    </button>
+  </div>
+
+  <div class="lightbox__stage">
+    <button class="lightbox__nav lightbox__nav--side lightbox__nav--prev" type="button" id="lb-prev" aria-label="Предыдущий документ">
+      <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg>
+    </button>
+
+    <figure class="lightbox__figure">
+      <img class="lightbox__img" id="lb-img" alt="">
+      <figcaption class="lightbox__caption" id="lb-caption"></figcaption>
+    </figure>
+
+    <button class="lightbox__nav lightbox__nav--side lightbox__nav--next" type="button" id="lb-next" aria-label="Следующий документ">
+      <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+    </button>
+  </div>
+
+  <div class="lightbox__foot">
+    <button class="lightbox__nav" type="button" id="lb-prev-m" aria-label="Предыдущий документ">
+      <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg>
+    </button>
+    <span class="lightbox__counter" aria-hidden="true">Листайте</span>
+    <button class="lightbox__nav" type="button" id="lb-next-m" aria-label="Следующий документ">
+      <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+    </button>
+  </div>
+</dialog>
+
+<script src="assets/js/main.js" defer></script>
+
+</body>
+</html>

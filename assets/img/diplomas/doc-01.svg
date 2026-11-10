@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1131" width="800" height="1131" role="img" aria-label="Диплом МПГУ, 1995">
+  <title>Диплом МПГУ, 1995</title>
+  <defs>
+    <linearGradient id="paper-01" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#FCF9F2" />
+      <stop offset="1" stop-color="#F4EEE2" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="1131" fill="url(#paper-01)" />
+
+  <!-- рамка -->
+  <rect x="26" y="26" width="748" height="1079" fill="none" stroke="#CFC4AE" stroke-width="2" />
+  <rect x="36" y="36" width="728" height="1059" fill="none" stroke="#E2D9C6" stroke-width="1" />
+
+  <!-- угловые метки -->
+  <g stroke="#CFC4AE" stroke-width="1.2" fill="none">
+    <path d="M26 76h20M76 26v20" />
+    <path d="M774 76h-20M724 26v20" />
+    <path d="M26 1055h20M76 1105v-20" />
+    <path d="M774 1055h-20M724 1105v-20" />
+  </g>
+
+  <!-- шапка -->
+  <text x="400" y="112" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="2.4" fill="#6E6659">МИНИСТЕРСТВО ОБРАЗОВАНИЯ РОССИЙСКОЙ ФЕДЕРАЦИИ</text>
+  <line x1="286" y1="132" x2="514" y2="132" stroke="#CFC4AE" stroke-width="1" />
+
+  <!-- заголовок -->
+  <text x="400" y="222" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="54" letter-spacing="9" fill="#2B2A28">ДИПЛОМ</text>
+  <text x="400" y="262" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="19" font-style="italic" fill="#6E6659">о высшем образовании</text>
+
+  <!-- орнамент -->
+  <g stroke="#CFC4AE" stroke-width="1" fill="none">
+    <line x1="330" y1="306" x2="372" y2="306" />
+    <line x1="428" y1="306" x2="470" y2="306" />
+  </g>
+  <path d="M400 300l6 6-6 6-6-6z" fill="none" stroke="#CFC4AE" stroke-width="1" />
+
+  <!-- выдан -->
+  <text x="400" y="372" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12.5" letter-spacing="0.6" fill="#6E6659">Настоящий диплом выдан</text>
+  <text x="400" y="424" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="33" letter-spacing="1.5" fill="#2B2A28">ТАТЬЯНА ПАВЛОВНА</text>
+
+  <!-- программа -->
+  <text x="400" y="478" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="0.4" fill="#6E6659">присуждена квалификация</text>
+  <text x="400" y="520" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="21" fill="#2B2A28">Учитель русского языка и литературы</text>
+
+  <text x="400" y="578" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11.5" letter-spacing="1.4" fill="#6E6659">ДИПЛОМ С ОТЛИЧИЕМ</text>
+
+  <!-- нижний блок -->
+  <line x1="86" y1="890" x2="714" y2="890" stroke="#E2D9C6" stroke-width="1" />
+
+  <text x="86" y="942" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="0.5" fill="#6E6659">Москва · 1995</text>
+
+  <!-- редактирование: серия и номер -->
+  <g>
+    <rect x="464" y="926" width="250" height="26" rx="3" fill="#2E2D2B" />
+    <text x="589" y="965" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9.5" letter-spacing="1" fill="#6E6659">СЕРИЯ И НОМЕР СКРЫТЫ</text>
+  </g>
+
+  <!-- подпись -->
+  <line x1="86" y1="1026" x2="266" y2="1026" stroke="#CFC4AE" stroke-width="1" />
+  <text x="86" y="1046" font-family="Arial, Helvetica, sans-serif" font-size="10" letter-spacing="1" fill="#6E6659">Ректор</text>
+
+  <!-- печать -->
+  <g opacity="0.55">
+    <circle cx="600" cy="1006" r="42" fill="none" stroke="#8A3A32" stroke-width="1.4" />
+    <circle cx="600" cy="1006" r="34" fill="none" stroke="#8A3A32" stroke-width="0.7" />
+    <text x="600" y="1002" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="7" letter-spacing="1.2" fill="#8A3A32">ДОКУМЕНТ</text>
+    <text x="600" y="1016" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="7" letter-spacing="1.2" fill="#8A3A32">ПРОВЕРЕН</text>
+  </g>
+</svg>

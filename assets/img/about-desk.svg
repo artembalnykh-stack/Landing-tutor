@@ -1,0 +1,205 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1250" width="1000" height="1250" role="img" aria-labelledby="dk-title dk-desc">
+  <title id="dk-title">Рабочий стол преподавателя</title>
+  <desc id="dk-desc">Синтетическая иллюстрация: раскрытая тетрадь, стопка книг, чашка чая, очки и сухая ветка в вазе. Не фотография.</desc>
+
+  <defs>
+    <linearGradient id="dk-wall" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#faf5ec"/>
+      <stop offset="1" stop-color="#efe2d1"/>
+    </linearGradient>
+
+    <linearGradient id="dk-window" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0" stop-color="#fdf7ea"/>
+      <stop offset="1" stop-color="#f0dfc7"/>
+    </linearGradient>
+
+    <linearGradient id="dk-desk" x1="0" y1="0" x2="0.2" y2="1">
+      <stop offset="0" stop-color="#cba57f"/>
+      <stop offset="0.55" stop-color="#bd9270"/>
+      <stop offset="1" stop-color="#a97c5b"/>
+    </linearGradient>
+
+    <linearGradient id="dk-desk-edge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9d7152"/>
+      <stop offset="1" stop-color="#8a6044"/>
+    </linearGradient>
+
+    <linearGradient id="dk-paper" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#fffdf7"/>
+      <stop offset="1" stop-color="#f4ead9"/>
+    </linearGradient>
+
+    <linearGradient id="dk-cup" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f6f0e5"/>
+      <stop offset="0.45" stop-color="#fffdf7"/>
+      <stop offset="1" stop-color="#e6dac8"/>
+    </linearGradient>
+
+    <linearGradient id="dk-vase" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#efe5d6"/>
+      <stop offset="1" stop-color="#d9c9b3"/>
+    </linearGradient>
+
+    <filter id="dk-blur8" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+
+    <filter id="dk-blur20" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+
+    <filter id="dk-grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.84" numOctaves="2" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix in="noise" type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.05"/>
+      </feComponentTransfer>
+    </filter>
+
+    <clipPath id="dk-window-clip">
+      <path d="M612 760V285c0-118 96-214 214-214s214 96 214 214v475Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Стена -->
+  <rect width="1000" height="1250" fill="url(#dk-wall)"/>
+
+  <!-- Окно-арка -->
+  <path d="M612 760V285c0-118 96-214 214-214s214 96 214 214v475Z" fill="url(#dk-window)"/>
+  <g clip-path="url(#dk-window-clip)">
+    <path d="M612 760V285c0-118 96-214 214-214s214 96 214 214v475Z" fill="#fdf8ec" opacity="0.5"/>
+    <path d="M826 71v689M612 470h428" stroke="#dcc8ac" stroke-width="14" opacity="0.65"/>
+    <path d="M700 90c40 210 34 420-18 670" stroke="#fffdf6" stroke-width="60" opacity="0.35" filter="url(#dk-blur20)"/>
+  </g>
+
+  <!-- Свет на стене -->
+  <path d="M470 1250 190 0h310l170 1250Z" fill="#fdf7ea" opacity="0.35" filter="url(#dk-blur20)"/>
+
+  <!-- Ветка в вазе (задний план) -->
+  <g fill="none" stroke="#8f7458" stroke-linecap="round">
+    <path d="M868 590c-6-104 8-196 38-266" stroke-width="5"/>
+    <path d="M898 380c-30-26-50-52-60-82" stroke-width="3.5"/>
+    <path d="M902 330c26-22 42-44 48-68" stroke-width="3"/>
+    <path d="M884 470c34-18 58-40 70-66" stroke-width="3.5"/>
+    <path d="M870 522c-32-14-54-32-68-54" stroke-width="3"/>
+    <path d="M876 434c-24-6-44-18-58-34" stroke-width="2.6"/>
+  </g>
+  <g fill="#b7a184" opacity="0.9">
+    <ellipse cx="838" cy="298" rx="16" ry="7" transform="rotate(-38 838 298)"/>
+    <ellipse cx="950" cy="262" rx="15" ry="6.5" transform="rotate(-18 950 262)"/>
+    <ellipse cx="954" cy="404" rx="17" ry="7" transform="rotate(24 954 404)"/>
+    <ellipse cx="802" cy="468" rx="15" ry="6.5" transform="rotate(32 802 468)"/>
+    <ellipse cx="818" cy="400" rx="13" ry="6" transform="rotate(-52 818 400)"/>
+  </g>
+
+  <!-- Ваза -->
+  <path d="M826 566c0-18 14-26 42-26s42 8 42 26l-8 96c-2 26-16 40-34 40s-32-14-34-40Z" fill="url(#dk-vase)"/>
+  <path d="M826 578c26 10 58 10 84 0" fill="none" stroke="#c6b49d" stroke-width="4" opacity="0.7"/>
+  <ellipse cx="868" cy="700" rx="58" ry="14" fill="#6d4a32" opacity="0.22" filter="url(#dk-blur8)"/>
+
+  <!-- Стол -->
+  <path d="M0 806h1000v444H0Z" fill="url(#dk-desk)"/>
+  <path d="M0 806h1000v26H0Z" fill="url(#dk-desk-edge)"/>
+  <path d="M0 832h1000" stroke="#8a6044" stroke-width="3" opacity="0.4"/>
+  <g stroke="#a97f5f" stroke-width="2" opacity="0.35">
+    <path d="M40 930c150-14 320-14 470 0"/>
+    <path d="M120 1050c180-12 360-12 540 0"/>
+    <path d="M620 1160c120-10 240-10 360 0"/>
+  </g>
+  <ellipse cx="500" cy="820" rx="470" ry="60" fill="#7a4a2a" opacity="0.16" filter="url(#dk-blur20)"/>
+
+  <!-- Стопка книг -->
+  <g>
+    <ellipse cx="800" cy="792" rx="150" ry="26" fill="#5f3c25" opacity="0.28" filter="url(#dk-blur8)"/>
+
+    <g transform="rotate(-2 800 760)">
+      <rect x="672" y="736" width="262" height="54" rx="7" fill="#d9c3a5"/>
+      <rect x="672" y="736" width="14" height="54" rx="7" fill="#c8ae8c"/>
+      <path d="M700 748h206M700 758h176" stroke="#b99d7b" stroke-width="4" opacity="0.6"/>
+    </g>
+
+    <g transform="rotate(2.5 800 690)">
+      <rect x="684" y="662" width="246" height="58" rx="7" fill="#a94e2e"/>
+      <rect x="684" y="662" width="14" height="58" rx="7" fill="#8f3f24"/>
+      <path d="M712 676h190M712 687h150" stroke="#e0b39c" stroke-width="4" opacity="0.65"/>
+      <rect x="858" y="674" width="46" height="8" rx="4" fill="#d9a05f" opacity="0.85"/>
+    </g>
+
+    <g transform="rotate(-1.5 800 616)">
+      <rect x="664" y="586" width="276" height="60" rx="7" fill="#22314b"/>
+      <rect x="664" y="586" width="14" height="60" rx="7" fill="#182438"/>
+      <path d="M694 602h198M694 614h158" stroke="#7f8ba0" stroke-width="4" opacity="0.6"/>
+      <rect x="860" y="598" width="52" height="9" rx="4.5" fill="#b98a4b" opacity="0.9"/>
+    </g>
+
+    <g transform="rotate(1.5 800 548)">
+      <rect x="688" y="522" width="226" height="52" rx="7" fill="#e7dcc9"/>
+      <rect x="688" y="522" width="13" height="52" rx="6.5" fill="#d2c3ab"/>
+      <path d="M714 534h172M714 544h132" stroke="#c2b199" stroke-width="4" opacity="0.7"/>
+    </g>
+  </g>
+
+  <!-- Чашка -->
+  <g>
+    <ellipse cx="226" cy="722" rx="86" ry="20" fill="#6d4a32" opacity="0.3" filter="url(#dk-blur8)"/>
+    <path d="M164 606h124l-10 98c-2 22-22 36-52 36s-50-14-52-36Z" fill="url(#dk-cup)"/>
+    <ellipse cx="226" cy="606" rx="62" ry="18" fill="#fdf8ee"/>
+    <ellipse cx="226" cy="606" rx="50" ry="12" fill="#8a5136"/>
+    <ellipse cx="226" cy="606" rx="50" ry="12" fill="#a94e2e" opacity="0.35"/>
+    <path d="M288 626c30-4 44 12 40 32-4 20-24 30-46 24" fill="none" stroke="#e6dac8" stroke-width="12" stroke-linecap="round"/>
+    <path d="M180 640c16 14 76 14 92 0" fill="none" stroke="#e8dcc9" stroke-width="4" opacity="0.8"/>
+  </g>
+
+  <!-- Пар -->
+  <g fill="none" stroke="#ffffff" stroke-linecap="round" opacity="0.55">
+    <path d="M206 568c-16-22 12-34-2-56" stroke-width="7"/>
+    <path d="M232 558c-14-20 12-30 0-50" stroke-width="6"/>
+    <path d="M256 570c-12-18 10-28 0-44" stroke-width="5"/>
+  </g>
+
+  <!-- Раскрытая тетрадь -->
+  <g>
+    <ellipse cx="430" cy="960" rx="270" ry="46" fill="#5f3c25" opacity="0.28" filter="url(#dk-blur8)"/>
+    <g transform="rotate(-4 430 860)">
+      <path d="M158 792c90-18 184-18 270 6v158c-86-24-180-24-270-6Z" fill="url(#dk-paper)"/>
+      <path d="M428 798c86-24 180-24 270-6v158c-90-18-184-18-270 6Z" fill="url(#dk-paper)"/>
+      <path d="M428 798v158" stroke="#d9c9b2" stroke-width="8" opacity="0.75"/>
+      <path d="M158 792c90-18 184-18 270 6v10c-86-24-180-24-270-6Z" fill="#e6d7c1" opacity="0.5"/>
+      <path d="M698 792c-90-18-184-18-270 6v10c86-24 180-24 270-6Z" fill="#e6d7c1" opacity="0.5"/>
+
+      <g stroke="#d6c4ab" stroke-width="3" stroke-linecap="round" opacity="0.8">
+        <path d="M196 836h198M196 866h198M196 896h198M196 926h164"/>
+        <path d="M462 842h198M462 872h198M462 902h198M462 932h146"/>
+      </g>
+      <path d="M214 816v156" stroke="#d9a9a0" stroke-width="3" opacity="0.7"/>
+
+      <!-- Пара «рукописных» строк без текста -->
+      <g fill="none" stroke="#8b7c6c" stroke-width="2.6" stroke-linecap="round" opacity="0.55">
+        <path d="M470 856c14-8 26 8 40 0s26 8 40 0"/>
+        <path d="M470 886c16-8 30 8 46 0s30 8 44 0"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Очки на тетради -->
+  <g fill="none" stroke="#b98a4b" stroke-width="3.6" stroke-linejoin="round">
+    <rect x="404" y="748" width="82" height="58" rx="22" fill="#ffffff" fill-opacity="0.14"/>
+    <rect x="500" y="748" width="82" height="58" rx="22" fill="#ffffff" fill-opacity="0.14"/>
+    <path d="M486 768c6-6 12-6 18 0"/>
+    <path d="M404 768l-36 22M582 768l42 26"/>
+  </g>
+
+  <!-- Ручка -->
+  <g transform="rotate(24 640 900)">
+    <rect x="600" y="890" width="150" height="13" rx="6.5" fill="#22314b"/>
+    <path d="M750 890l26 6.5-26 6.5Z" fill="#b98a4b"/>
+    <rect x="620" y="892" width="34" height="9" rx="4.5" fill="#b98a4b" opacity="0.85"/>
+  </g>
+
+  <!-- Мягкий свет из окна на столе -->
+  <path d="M610 806 900 806 740 1250 430 1250Z" fill="#fdf6e6" opacity="0.16"/>
+
+  <!-- Виньетка и зерно -->
+  <rect width="1000" height="1250" fill="#7a4a2a" opacity="0.04"/>
+  <rect width="1000" height="1250" filter="url(#dk-grain)"/>
+</svg>

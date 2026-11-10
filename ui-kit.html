@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="1">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>UI Kit — Татьяна Павловна, репетитор по русскому языку</title>
+  <meta name="description" content="Дизайн-система лендинга: палитры трёх тем, типографика, компоненты, состояния и правила доступности.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#f7f2ea">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=PT+Sans:wght@400;700&family=PT+Serif:wght@400;700&family=Lora:wght@400;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/landing.css">
+  <link rel="stylesheet" href="assets/css/ui-kit.css">
+</head>
+<body class="kit-body">
+
+<a class="skip-link" href="#main">Перейти к содержанию</a>
+
+<!-- ============ Спрайт иконок ============ -->
+<svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
+  <symbol id="i-trending-down" viewBox="0 0 24 24"><path d="M22 17 13.5 8.5 8.5 13.5 2 7"/><path d="M16 17h6v-6"/></symbol>
+  <symbol id="i-shuffle" viewBox="0 0 24 24"><path d="M16 3h5v5"/><path d="M4 20 21 3"/><path d="M21 16v5h-5"/><path d="m15 15 6 6"/><path d="m4 4 5 5"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></symbol>
+  <symbol id="i-book-open" viewBox="0 0 24 24"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-check-circle" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></symbol>
+  <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m11 6-6 6 6 6"/></symbol>
+  <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2 11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-grad-cap" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.657 2.686 3 6 3s6-1.343 6-3v-5"/></symbol>
+  <symbol id="i-file-text" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></symbol>
+  <symbol id="i-shield-check" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-zoom-in" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6"/><path d="M8 11h6"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-monitor" viewBox="0 0 24 24"><path d="M20 3H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"/><path d="M8 21h8"/><path d="M12 17v4"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><path d="M20 12v10H4V12"/><path d="M2 7h20v5H2z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M21 2v6h-6"/><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M3 22v-6h6"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></symbol>
+</svg>
+
+<header class="site-header">
+  <div class="container header__inner">
+    <a class="brand" href="index.html">
+      <span class="brand__mark" aria-hidden="true">ТП</span>
+      <span class="brand__text">
+        <span class="brand__name">Татьяна Павловна</span>
+        <span class="brand__role">Дизайн-система</span>
+      </span>
+    </a>
+
+    <div class="kit-switch" role="group" aria-label="Переключение темы">
+      <button type="button" data-set-theme="1" aria-pressed="true">01</button>
+      <button type="button" data-set-theme="2" aria-pressed="false">02</button>
+      <button type="button" data-set-theme="3" aria-pressed="false">03</button>
+    </div>
+
+    <a class="btn btn--ghost btn--sm" href="index.html">На сайт</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <div class="container kit-intro">
+    <div class="section-head section-head--wide" style="margin-bottom:0">
+      <p class="eyebrow">UI Kit</p>
+      <h1>Дизайн-система лендинга</h1>
+      <p class="lead">Один набор токенов, три палитры, одна сетка. Переключайте тему кнопками в шапке — все элементы ниже меняются вместе с ней.</p>
+      <p class="kit-note">Всё построено на CSS-переменных: цвета, шрифты, радиусы и отступы описаны в <code>assets/css/tokens.css</code>. Компоненты не знают, какая тема включена, — они читают семантические токены.</p>
+    </div>
+  </div>
+
+  <!-- ================= 01. Цвет ================= -->
+  <section class="kit-section">
+    <div class="container">
+      <div class="kit-head">
+        <p class="kit-num">01 — Цвет</p>
+        <h2>Три палитры</h2>
+        <p class="kit-note">У каждой темы свой характер, но одинаковая структура: тёплый или нейтральный фон, глубокий основной текст, один акцент и мягкая подложка для акцента. Контраст текста и кнопок проверен по WCAG AA.</p>
+      </div>
+
+      <div class="kit-palettes">
+
+        <div>
+          <p class="kit-palette__title">Тема 1 — «Тихая гавань» · беж, синий, терракота</p>
+          <div class="swatches">
+            <div class="swatch"><div class="swatch__chip" style="background:#F7F2EA"></div><div class="swatch__meta"><span class="swatch__name">Фон</span><span class="swatch__hex">#F7F2EA</span></div></div>
+            <div class="swatch"><div class="swatch__chip" style="background:#F1E9DD"></div><div class="swatch__meta"><span class="swatch__name">Фон мягкий</span><span class="swatch__hex">#F1E9DD</span></div></div>
+            <div class="swatch"><div class="swatch__chip" style="background:#FFFFFF"></div><div class="swatch__meta"><span class="swatch__name">Поверхность</span><span class="swatch__hex">#FFFFFF</span></div></div>
+            <div class="swatch"><div class="swatch__chip" style="background:#17233A"></div><div class="swatch__meta"><span class="swatch__name">Текст</span><span class="swatch__hex">#17233A</span></div></div>
+            <div class="swatch"><div class="swatch__chip" style="background:#A94E2E"></div><div class="swatch__meta"><span class="swatch__name">Акцент</span><span class="swatch__hex">#A94E2E</span></div></div>
+            <div class="swatch"><div class="swatch__chip" style="background:#F0DED3"></div><div class="swatch__meta"><span class="swatch__name">Акцент мягкий</span><span class="swatch__hex">#F0DED3</span></div></div>
+            <div class="swatch"><div class="swatch__chip" style="background:#E2D7C8"></div><div class="swatch__meta"><span class="swatch__name">Линия</span><span class="swatch__hex">#E2D7C8</span></div></div>
+            <div class="swatch"><div class="swatch__chip" style="background:#17233A"></div><div class="swatch__meta"><span class="swatch__name">Тёмный блок</span><span class="swatch__hex">#17233A</span></div></div>
+          </div>
+        </div>
+
+        <div>
+          <p class="kit-palette__title">Тема 2 — «Тихая точность» · молоко, графит, изумруд</p>
+          <div class="swatches">
+            <div class="swatch"><div class="swatch__chip" style="background:#FBFAF7"></div><div class="swatch__meta"><span class="swatch__name">Фон</span><span class="swatch__hex">#FBFAF7</span></div></div>
+            <div class="swatch"><div class="swatch__chip" style="background:#F3F2EE"></div><div class="swatch__meta"><span class="swatch__name">Фон мягкий</span><span class="swatch__hex">#F3F2EE</span></div></div>
+            <div class="swatch"><div class="swatch__chip" style="background:#FFFFFF"></div><div class="swatch__meta"><span class="swatch__name">Поверхность</span><span class="swatch__hex">#FFFFFF</span></div></div>
+            <div class="swatch"><div class="swatch__chip" style="background:#23262A"></div><div class="swatch__meta"><span class="swatch__name">Текст</span><span class="swatch__hex">#23262A</span></div></div>
+            <div class="swatch"><div class="swatch__chip" style="background:#1F5D4B"></div><div class="swatch__meta"><span class="swatch__name">Акцент</span><span class="swatch__hex">#1F5D4B</span></div></div>
+            <div class="swatch"><div class="swatch__chip" style="background:#DCE8E3"></div><div class="swatch__meta"><span class="swatch__name">Акцент мягкий</span><span class="swatch__hex">#DCE8E3</span></div></div>
+            <div class="swatch"><div class="swatch__chip" style="background:#E3E2DD"></div><div class="swatch__meta"><span class="swatch__name">Линия</span><span class="swatch__hex">#E3E2DD</span></div></div>
+            <div class="swatch"><div class="swatch__chip" style="background:#1E2422"></div><div class="swatch__meta"><span class="swatch__name">Тёмный блок</span><span class="swatch__hex">#1E2422</span></div></div>
+          </div>
+        </div>
+
+        <div>
+          <p class="kit-palette__title">Тема 3 — «Сдержанная печать» · серый, бордо, песок</p>
+          <div class="swatches">
+            <div class="swatch"><div class="swatch__chip" style="background:#F2F1EE"></div><div class="swatch__meta"><span class="swatch__name">Фон</span><span class="swatch__hex">#F2F1EE</span></div></div>
+            <div class="swatch"><div class="swatch__chip" style="background:#E9E7E2"></div><div class="swatch__meta"><span class="swatch__name">Фон мягкий</span><span class="swatch__hex">#E9E7E2</span></div></div>
+            <div class="swatch"><div class="swatch__chip" style="background:#FFFFFF"></div><div class="swatch__meta"><span class="swatch__name">Поверхность</span><span class="swatch__hex">#FFFFFF</span></div></div>
+            <div class="swatch"><div class="swatch__chip" style="background:#232024"></div><div class="swatch__meta"><span class="swatch__name">Текст</span><span class="swatch__hex">#232024</span></div></div>
+            <div class="swatch"><div class="swatch__chip" style="background:#6E2033"></div><div class="swatch__meta"><span class="swatch__name">Акцент</span><span class="swatch__hex">#6E2033</span></div></div>
+            <div class="swatch"><div class="swatch__chip" style="background:#EDDCDF"></div><div class="swatch__meta"><span class="swatch__name">Акцент мягкий</span><span class="swatch__hex">#EDDCDF</span></div></div>
+            <div class="swatch"><div class="swatch__chip" style="background:#DCD8D1"></div><div class="swatch__meta"><span class="swatch__name">Линия</span><span class="swatch__hex">#DCD8D1</span></div></div>
+            <div class="swatch"><div class="swatch__chip" style="background:#2A2226"></div><div class="swatch__meta"><span class="swatch__name">Тёмный блок</span><span class="swatch__hex">#2A2226</span></div></div>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="kit-palette__title" style="margin-top: var(--space-7)">Семантические токены активной темы</p>
+      <table class="kit-table">
+        <thead>
+          <tr><th>Токен</th><th>Назначение</th><th>Значение</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="kit-dot" style="background:var(--bg)"></span><code>--bg</code></td><td>Фон страницы</td><td data-token="--bg">—</td></tr>
+          <tr><td><span class="kit-dot" style="background:var(--bg-soft)"></span><code>--bg-soft</code></td><td>Чередование секций</td><td data-token="--bg-soft">—</td></tr>
+          <tr><td><span class="kit-dot" style="background:var(--surface)"></span><code>--surface</code></td><td>Карточки, поля</td><td data-token="--surface">—</td></tr>
+          <tr><td><span class="kit-dot" style="background:var(--ink)"></span><code>--ink</code></td><td>Основной текст</td><td data-token="--ink">—</td></tr>
+          <tr><td><span class="kit-dot" style="background:var(--muted)"></span><code>--muted</code></td><td>Второстепенный текст</td><td data-token="--muted">—</td></tr>
+          <tr><td><span class="kit-dot" style="background:var(--line)"></span><code>--line</code></td><td>Разделители, рамки</td><td data-token="--line">—</td></tr>
+          <tr><td><span class="kit-dot" style="background:var(--accent)"></span><code>--accent</code></td><td>Акцент, кнопки, ссылки</td><td data-token="--accent">—</td></tr>
+          <tr><td><span class="kit-dot" style="background:var(--accent-soft)"></span><code>--accent-soft</code></td><td>Подложка иконок и чипов</td><td data-token="--accent-soft">—</td></tr>
+          <tr><td><span class="kit-dot" style="background:var(--dark)"></span><code>--dark</code></td><td>Тёмная секция</td><td data-token="--dark">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ================= 02. Типографика ================= -->
+  <section class="kit-section">
+    <div class="container">
+      <div class="kit-head">
+        <p class="kit-num">02 — Типографика</p>
+        <h2>Заголовки с засечками, текст — гротеск</h2>
+        <p class="kit-note">Размеры текучие: <code>clamp()</code> плавно ведёт шкалу от 360 до 1440 px без скачков на брейкпоинтах. Заголовки набраны антиквой, основной текст — гротеском с высокой разборчивостью на мобильном.</p>
+      </div>
+
+      <div class="kit-split">
+        <div class="specimen">
+          <div class="specimen__row">
+            <span class="specimen__label">Display · H1 · var(--fs-display)</span>
+            <p class="specimen__display">Русский язык без зубрёжки</p>
+          </div>
+          <div class="specimen__row">
+            <span class="specimen__label">H2 · var(--fs-h2)</span>
+            <p class="specimen__h2">Как проходят наши занятия</p>
+          </div>
+          <div class="specimen__row">
+            <span class="specimen__label">H3 · var(--fs-h3)</span>
+            <p class="specimen__h3">Индивидуальный план</p>
+          </div>
+          <div class="specimen__row">
+            <span class="specimen__label">Lead · var(--fs-lead)</span>
+            <p class="specimen__lead">Индивидуальные занятия с педагогом, который за 30 лет нашёл подход к тысячам учеников.</p>
+          </div>
+          <div class="specimen__row">
+            <span class="specimen__label">Body · var(--fs-body) · 1.65</span>
+            <p class="specimen__body">За три десятилетия в школе и частной практике я помогла более чем 800 ученикам: кто-то подтянул оценки, кто-то сдал ЕГЭ на 85+ баллов, а кто-то просто перестал бояться русского и полюбил его.</p>
+          </div>
+          <div class="specimen__row" style="border-bottom:0;padding-bottom:0">
+            <span class="specimen__label">Small · var(--fs-xs)</span>
+            <p class="specimen__small">Первое занятие-знакомство (30 минут) — бесплатно. Оплата по факту или за абонемент.</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="card">
+            <p class="kit-num" style="color:var(--muted)">Шрифтовые пары</p>
+            <div class="font-pairs">
+              <div class="font-pair">
+                <span class="font-pair__label">Тема 01</span>
+                <span class="font-pair__display" style="font-family:'Playfair Display', Georgia, serif">Playfair Display</span>
+                <span class="font-pair__text" style="font-family:Inter, sans-serif">+ Inter</span>
+              </div>
+              <div class="font-pair">
+                <span class="font-pair__label">Тема 02</span>
+                <span class="font-pair__display" style="font-family:'PT Serif', Georgia, serif">PT Serif</span>
+                <span class="font-pair__text" style="font-family:'PT Sans', sans-serif">+ PT Sans</span>
+              </div>
+              <div class="font-pair" style="border-bottom:0;padding-bottom:0">
+                <span class="font-pair__label">Тема 03</span>
+                <span class="font-pair__display" style="font-family:'Lora', Georgia, serif">Lora</span>
+                <span class="font-pair__text" style="font-family:Manrope, sans-serif">+ Manrope</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="callout" style="margin-top: var(--space-4)">
+            <svg class="icon callout__icon" aria-hidden="true"><use href="#i-check-circle"/></svg>
+            <span>Все гарнитуры — с кириллицей и открытой лицензией. Подключаются одним запросом к Google Fonts, локальная сборка не нужна.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 03. Сетка и отступы ================= -->
+  <section class="kit-section">
+    <div class="container">
+      <div class="kit-head">
+        <p class="kit-num">03 — Сетка и ритм</p>
+        <h2>Отступы, контейнер, вертикальный ритм</h2>
+        <p class="kit-note">Шаг шкалы — 4 px. Контейнер — 1180 px плюс поля. Вертикальные отступы секций текучие: 56 px на мобильном, 112 px на широком экране.</p>
+      </div>
+
+      <div class="kit-split">
+        <div>
+          <p class="kit-palette__title">Шкала отступов</p>
+          <div class="space-list">
+            <div class="space-row"><span class="space-row__name">--space-1</span><span class="space-row__bar" style="width:4px"></span><span class="space-row__val">4 px</span></div>
+            <div class="space-row"><span class="space-row__name">--space-2</span><span class="space-row__bar" style="width:8px"></span><span class="space-row__val">8 px</span></div>
+            <div class="space-row"><span class="space-row__name">--space-3</span><span class="space-row__bar" style="width:12px"></span><span class="space-row__val">12 px</span></div>
+            <div class="space-row"><span class="space-row__name">--space-4</span><span class="space-row__bar" style="width:16px"></span><span class="space-row__val">16 px</span></div>
+            <div class="space-row"><span class="space-row__name">--space-5</span><span class="space-row__bar" style="width:24px"></span><span class="space-row__val">24 px</span></div>
+            <div class="space-row"><span class="space-row__name">--space-6</span><span class="space-row__bar" style="width:32px"></span><span class="space-row__val">32 px</span></div>
+            <div class="space-row"><span class="space-row__name">--space-7</span><span class="space-row__bar" style="width:40px"></span><span class="space-row__val">40 px</span></div>
+            <div class="space-row"><span class="space-row__name">--space-8</span><span class="space-row__bar" style="width:48px"></span><span class="space-row__val">48 px</span></div>
+            <div class="space-row"><span class="space-row__name">--space-9</span><span class="space-row__bar" style="width:64px"></span><span class="space-row__val">64 px</span></div>
+          </div>
+        </div>
+
+        <div class="kit-stack">
+          <div class="card">
+            <p class="kit-palette__title" style="margin-bottom:0.5rem">Контейнер</p>
+            <p class="kit-note" style="max-width:none"><code>max-width: calc(1180px + var(--gutter) * 2)</code><br>Поля: 20 px → 40 px, текучие.</p>
+          </div>
+          <div class="card">
+            <p class="kit-palette__title" style="margin-bottom:0.5rem">Вертикальный ритм</p>
+            <p class="kit-note" style="max-width:none"><code>--section-y: clamp(3.5rem, 2.33rem + 5.19vw, 7rem)</code><br>Между блоками — только этот токен, без «на глаз».</p>
+          </div>
+          <div class="card">
+            <p class="kit-palette__title" style="margin-bottom:0.5rem">Брейкпоинты</p>
+            <p class="kit-note" style="max-width:none">360 → 520 → 700 → 900 → 1024 → 1180. Мобильный сценарий первичен: одноколоночная раскладка, полноширинные кнопки.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 04. Радиусы и тени ================= -->
+  <section class="kit-section">
+    <div class="container">
+      <div class="kit-head">
+        <p class="kit-num">04 — Форма</p>
+        <h2>Радиусы и тени</h2>
+        <p class="kit-note">Умеренные радиусы: 12 px у кнопок, 16 px у карточек. Тени мягкие и низкоконтрастные — они не «поднимают» карточку, а отделяют её от фона.</p>
+      </div>
+
+      <div class="tiles">
+        <div class="tile"><div class="tile__box" style="border-radius:4px"></div><span class="tile__label">--r-xs · 4</span></div>
+        <div class="tile"><div class="tile__box" style="border-radius:8px"></div><span class="tile__label">--r-sm · 8</span></div>
+        <div class="tile"><div class="tile__box" style="border-radius:10px"></div><span class="tile__label">--r-md · 10</span></div>
+        <div class="tile"><div class="tile__box" style="border-radius:12px"></div><span class="tile__label">--r-btn · 12</span></div>
+        <div class="tile"><div class="tile__box" style="border-radius:16px"></div><span class="tile__label">--r-lg · 16</span></div>
+        <div class="tile"><div class="tile__box" style="border-radius:24px"></div><span class="tile__label">--r-xl · 24</span></div>
+        <div class="tile"><div class="tile__box" style="border-radius:999px"></div><span class="tile__label">--r-pill · 999</span></div>
+        <div class="tile"><div class="tile__box" style="box-shadow:var(--shadow-sm);border-radius:12px"></div><span class="tile__label">--shadow-sm</span></div>
+        <div class="tile"><div class="tile__box" style="box-shadow:var(--shadow-md);border-radius:12px"></div><span class="tile__label">--shadow-md</span></div>
+        <div class="tile"><div class="tile__box" style="box-shadow:var(--shadow-lg);border-radius:12px"></div><span class="tile__label">--shadow-lg</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 05. Кнопки ================= -->
+  <section class="kit-section">
+    <div class="container">
+      <div class="kit-head">
+        <p class="kit-num">05 — Кнопки</p>
+        <h2>Кнопки и ссылки</h2>
+        <p class="kit-note">Минимальная высота 52 px, на мобильном — на всю ширину. Контраст текста к фону не ниже 4.5:1 во всех темах, включая акцентную кнопку на тёмной секции.</p>
+      </div>
+
+      <div class="kit-stack">
+        <div class="kit-row">
+          <button class="btn btn--primary" type="button">Основная кнопка</button>
+          <button class="btn btn--ghost" type="button">Второстепенная</button>
+          <a class="link-arrow" href="index.html#prices">Текстовая ссылка <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+        </div>
+
+        <div class="kit-row">
+          <button class="btn btn--primary btn--lg" type="button">Крупная · 58 px</button>
+          <button class="btn btn--primary" type="button">Обычная · 52 px</button>
+          <button class="btn btn--ghost btn--sm" type="button">Малая · 44 px</button>
+        </div>
+
+        <div class="kit-row">
+          <button class="btn btn--primary btn--block" type="button" style="max-width:360px">Кнопка на всю ширину</button>
+        </div>
+
+        <div class="card" style="background-color:var(--dark);border-color:var(--dark-line);padding:var(--space-5)">
+          <p class="kit-palette__title" style="color:var(--dark-muted)">На тёмной секции</p>
+          <div class="kit-row">
+            <button class="btn btn--light" type="button">Светлая кнопка</button>
+            <button class="btn btn--outline-light" type="button">Контурная</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 06. Иконки ================= -->
+  <section class="kit-section">
+    <div class="container">
+      <div class="kit-head">
+        <p class="kit-num">06 — Иконки</p>
+        <h2>Линейные иконки, 24 × 24</h2>
+        <p class="kit-note">Единый спрайт: толщина линии 1.5, скруглённые окончания, цвет наследуется от текста. Никаких эмодзи — только SVG.</p>
+      </div>
+
+      <div class="icon-grid">
+        <div class="icon-cell"><svg class="icon" aria-hidden="true"><use href="#i-trending-down"/></svg><span>trending-down</span></div>
+        <div class="icon-cell"><svg class="icon" aria-hidden="true"><use href="#i-shuffle"/></svg><span>shuffle</span></div>
+        <div class="icon-cell"><svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg><span>alert</span></div>
+        <div class="icon-cell"><svg class="icon" aria-hidden="true"><use href="#i-book-open"/></svg><span>book-open</span></div>
+        <div class="icon-cell"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>check</span></div>
+        <div class="icon-cell"><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg><span>check-circle</span></div>
+        <div class="icon-cell"><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg><span>arrow-right</span></div>
+        <div class="icon-cell"><svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg><span>arrow-left</span></div>
+        <div class="icon-cell"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg><span>arrow-up-right</span></div>
+        <div class="icon-cell"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg><span>x</span></div>
+        <div class="icon-cell"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><span>phone</span></div>
+        <div class="icon-cell"><svg class="icon" aria-hidden="true"><use href="#i-send"/></svg><span>send</span></div>
+        <div class="icon-cell"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><span>clock</span></div>
+        <div class="icon-cell"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg><span>pin</span></div>
+        <div class="icon-cell"><svg class="icon" aria-hidden="true"><use href="#i-grad-cap"/></svg><span>grad-cap</span></div>
+        <div class="icon-cell"><svg class="icon" aria-hidden="true"><use href="#i-file-text"/></svg><span>file-text</span></div>
+        <div class="icon-cell"><svg class="icon" aria-hidden="true"><use href="#i-shield-check"/></svg><span>shield-check</span></div>
+        <div class="icon-cell"><svg class="icon" aria-hidden="true"><use href="#i-zoom-in"/></svg><span>zoom-in</span></div>
+        <div class="icon-cell"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg><span>users</span></div>
+        <div class="icon-cell"><svg class="icon" aria-hidden="true"><use href="#i-monitor"/></svg><span>monitor</span></div>
+        <div class="icon-cell"><svg class="icon" aria-hidden="true"><use href="#i-gift"/></svg><span>gift</span></div>
+        <div class="icon-cell"><svg class="icon" aria-hidden="true"><use href="#i-refresh"/></svg><span>refresh</span></div>
+        <div class="icon-cell"><svg class="icon" aria-hidden="true"><use href="#i-card"/></svg><span>card</span></div>
+        <div class="icon-cell"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg><span>lock</span></div>
+        <div class="icon-cell"><svg class="icon" aria-hidden="true"><use href="#i-pen"/></svg><span>pen</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 07. Карточки и данные ================= -->
+  <section class="kit-section">
+    <div class="container">
+      <div class="kit-head">
+        <p class="kit-num">07 — Компоненты</p>
+        <h2>Карточки, чипы, цифры</h2>
+      </div>
+
+      <div class="kit-cards">
+        <article class="card">
+          <p class="chip">2024</p>
+          <h3 style="margin-top:0.75rem">Базовая карточка</h3>
+          <p class="note" style="margin-top:0.35rem">Белая поверхность, рамка в 1 px, радиус 16 px.</p>
+        </article>
+        <article class="card card--soft">
+          <p class="chip chip--muted">2024</p>
+          <h3 style="margin-top:0.75rem">Мягкая карточка</h3>
+          <p class="note" style="margin-top:0.35rem">Тот же каркас на приглушённой подложке.</p>
+        </article>
+        <article class="card card--accent">
+          <p class="badge">Акцент</p>
+          <h3 style="margin-top:0.75rem">Карточка-акцент</h3>
+          <p class="note" style="margin-top:0.35rem">Рамка цвета акцента, без заливки.</p>
+        </article>
+      </div>
+
+      <div class="kit-split" style="margin-top: var(--space-6)">
+        <div>
+          <p class="kit-palette__title">Цифры</p>
+          <div class="card">
+            <ul class="about__stats" style="margin:0;padding:0;border:0">
+              <li class="stat">
+                <span class="stat__value">30 лет</span>
+                <span class="stat__label">педагогического стажа</span>
+              </li>
+              <li class="stat">
+                <span class="stat__value">800+</span>
+                <span class="stat__label">учеников</span>
+              </li>
+              <li class="stat">
+                <span class="stat__value">92%</span>
+                <span class="stat__label">сдают ЕГЭ на 75+</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <p class="kit-palette__title">Списки и выноски</p>
+          <div class="card">
+            <ul class="checklist">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Отвечаю в течение дня</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Первое занятие — бесплатно</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Онлайн или очно в Москве</li>
+            </ul>
+            <div class="callout" style="margin-top: var(--space-4)">
+              <svg class="icon callout__icon" aria-hidden="true"><use href="#i-check-circle"/></svg>
+              <span>Выноска с левой акцентной линией для важных уточнений.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 08. Аккордеон ================= -->
+  <section class="kit-section">
+    <div class="container">
+      <div class="kit-head">
+        <p class="kit-num">08 — Аккордеон</p>
+        <h2>Вопросы и ответы</h2>
+        <p class="kit-note">Нативный <code>&lt;details&gt;</code>: работает без JavaScript. Скрипт добавляет плавное раскрытие и закрывает соседние пункты.</p>
+      </div>
+
+      <div class="faq" style="max-width:800px">
+        <details class="faq__item" open>
+          <summary class="faq__q">
+            Это пример открытого вопроса
+            <span class="faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq__panel" style="height:auto">
+            <div class="faq__panel-inner">
+              <p>Ответ набран тем же кеглем, что и основной текст, но приглушённым цветом. Максимальная ширина — 62 символа в строке.</p>
+            </div>
+          </div>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__q">
+            А это — закрытый
+            <span class="faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq__panel">
+            <div class="faq__panel-inner">
+              <p>Иконка «плюс» поворачивается в «минус», рамка становится акцентной.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 09. Лайтбокс ================= -->
+  <section class="kit-section">
+    <div class="container">
+      <div class="kit-head">
+        <p class="kit-num">09 — Лайтбокс</p>
+        <h2>Просмотр документов</h2>
+        <p class="kit-note">Нативный <code>&lt;dialog&gt;</code>: фокус запирается автоматически, Escape закрывает. Стрелки и свайп переключают документы. Нажмите на превью.</p>
+      </div>
+
+      <ul class="diplomas__grid" style="max-width:340px">
+        <li class="dip">
+          <button class="dip__btn" type="button"
+                  data-doc="assets/img/diplomas/doc-01.svg"
+                  data-caption="Диплом МПГУ им. В. И. Ленина · русский язык и литература · 1995 · с отличием">
+            <span class="dip__frame">
+              <img src="assets/img/diplomas/doc-01.svg" alt="Диплом МПГУ, 1995" width="800" height="1131" loading="lazy">
+              <span class="dip__zoom" aria-hidden="true"><svg class="icon"><use href="#i-zoom-in"/></svg></span>
+            </span>
+            <span class="dip__meta">
+              <span class="dip__name">Диплом МПГУ</span>
+              <span class="dip__sub">Русский язык и литература · 1995</span>
+            </span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= 10. Форма ================= -->
+  <section class="kit-section">
+    <div class="container">
+      <div class="kit-head">
+        <p class="kit-num">10 — Форма</p>
+        <h2>Заявка через Яндекс.Формы</h2>
+        <p class="kit-note">Форма встроена через iframe и растягивается по ширине контейнера. Высоту кадра считает <code>main.js</code>: по умолчанию 660&nbsp;px, а если форма прислала свою высоту — она подставляется как есть. Пока форма грузится — компактный скелетон; если форма недоступна (например, страница открыта напрямую с диска) — аккуратная карточка со ссылкой на форму в новой вкладке. Минимальная высота блока задана переменной <code>--yform-min</code>, поэтому заготовка не выглядит пустой.</p>
+      </div>
+
+      <pre class="kit-pre"><code>&lt;div class="yform" data-yform&gt;
+  &lt;div class="yform__skeleton" aria-hidden="true"&gt;…&lt;/div&gt;
+
+  &lt;iframe src="https://forms.yandex.ru/u/&lt;id&gt;?iframe=1"
+          name="ya-form-&lt;id&gt;"
+          title="Форма заявки"
+          frameborder="0"&gt;&lt;/iframe&gt;
+
+  &lt;div class="yform__fallback"&gt;
+    &lt;a class="btn btn--primary" href="https://forms.yandex.ru/u/&lt;id&gt;/"&gt;Открыть форму&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+      <div class="callout" style="margin-top: var(--space-5); max-width:60rem">
+        <svg class="icon callout__icon" aria-hidden="true"><use href="#i-shield-check"/></svg>
+        <span>Данные не проходят через сервер сайта: браузер отправляет их напрямую в Яндекс.Формы. В README описано, как заменить форму и что проверить перед публикацией.</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <span class="footer__name">Татьяна Павловна</span>
+      <span class="footer__meta">Дизайн-система · 2026</span>
+    </div>
+    <nav class="footer__links" aria-label="Подвал">
+      <a href="index.html">Лендинг</a>
+      <a href="concepts/index.html">Концепты</a>
+      <a href="privacy.html">Политика конфиденциальности</a>
+    </nav>
+  </div>
+</footer>
+
+<!-- ============ Лайтбокс (нужен main.js) ============ -->
+<dialog class="lightbox" id="lightbox" aria-label="Просмотр документа">
+  <div class="lightbox__bar">
+    <span class="lightbox__counter" id="lb-counter"></span>
+    <button class="lightbox__close" type="button" id="lb-close" aria-label="Закрыть">
+      <svg class="icon" aria-hidden="true"><use href="#i-x"/></svg>
+    </button>
+  </div>
+
+  <div class="lightbox__stage">
+    <button class="lightbox__nav lightbox__nav--side lightbox__nav--prev" type="button" id="lb-prev" aria-label="Предыдущий документ">
+      <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg>
+    </button>
+
+    <figure class="lightbox__figure">
+      <img class="lightbox__img" id="lb-img" alt="">
+      <figcaption class="lightbox__caption" id="lb-caption"></figcaption>
+    </figure>
+
+    <button class="lightbox__nav lightbox__nav--side lightbox__nav--next" type="button" id="lb-next" aria-label="Следующий документ">
+      <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+    </button>
+  </div>
+
+  <div class="lightbox__foot">
+    <button class="lightbox__nav" type="button" id="lb-prev-m" aria-label="Предыдущий документ">
+      <svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg>
+    </button>
+    <span class="lightbox__counter" aria-hidden="true">Листайте</span>
+    <button class="lightbox__nav" type="button" id="lb-next-m" aria-label="Следующий документ">
+      <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+    </button>
+  </div>
+</dialog>
+
+<script src="assets/js/main.js" defer></script>
+<script>
+  (function () {
+    var root = document.documentElement;
+    var buttons = Array.prototype.slice.call(document.querySelectorAll("[data-set-theme]"));
+
+    function paintTokens() {
+      Array.prototype.slice.call(document.querySelectorAll("[data-token]")).forEach(function (el) {
+        var value = getComputedStyle(root).getPropertyValue(el.getAttribute("data-token")).trim();
+        el.textContent = value ? value.toUpperCase() : "—";
+      });
+    }
+
+    function setTheme(id) {
+      root.setAttribute("data-theme", id);
+      buttons.forEach(function (btn) {
+        btn.setAttribute("aria-pressed", btn.getAttribute("data-set-theme") === id ? "true" : "false");
+      });
+      paintTokens();
+    }
+
+    buttons.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        setTheme(btn.getAttribute("data-set-theme"));
+      });
+    });
+
+    paintTokens();
+  })();
+</script>
+
+</body>
+</html>

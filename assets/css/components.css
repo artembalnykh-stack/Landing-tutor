@@ -1,0 +1,777 @@
+/* ==========================================================================
+   components.css — переиспользуемые элементы интерфейса
+   ========================================================================== */
+
+/* ---------- Иконки ---------- */
+.icon {
+  display: inline-block;
+  flex: none;
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vertical-align: middle;
+}
+
+.icon--sm {
+  width: 18px;
+  height: 18px;
+}
+
+.icon--lg {
+  width: 28px;
+  height: 28px;
+}
+
+.icon-box {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background-color: var(--accent-soft);
+  color: var(--accent-soft-ink);
+}
+
+.icon-box--sm {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+}
+
+.icon-box--plain {
+  background-color: transparent;
+  color: var(--accent);
+}
+
+/* ---------- Кнопки ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-height: 52px;
+  padding: 0.85rem 1.5rem;
+  border: 1px solid transparent;
+  border-radius: var(--r-btn);
+  font-family: var(--font-text);
+  font-size: 1rem;
+  font-weight: var(--fw-semibold);
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color var(--dur-1) var(--ease), border-color var(--dur-1) var(--ease),
+    color var(--dur-1) var(--ease), transform var(--dur-1) var(--ease),
+    box-shadow var(--dur-2) var(--ease);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn--primary {
+  background-color: var(--accent);
+  color: var(--accent-ink);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--primary:hover {
+  background-color: var(--accent-hover);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.btn--primary:active {
+  background-color: var(--accent-active);
+}
+
+.btn--ghost {
+  border-color: var(--line-strong);
+  background-color: transparent;
+  color: var(--ink);
+}
+
+.btn--ghost:hover {
+  border-color: var(--ink);
+  background-color: var(--surface);
+}
+
+.btn--light {
+  background-color: var(--dark-ink);
+  color: var(--dark);
+}
+
+.btn--light:hover {
+  background-color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.btn--outline-light {
+  border-color: rgba(255, 255, 255, 0.4);
+  color: var(--dark-ink);
+  background-color: transparent;
+}
+
+.btn--outline-light:hover {
+  border-color: var(--dark-ink);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.btn--block {
+  width: 100%;
+}
+
+.btn--lg {
+  min-height: 58px;
+  padding-inline: 1.75rem;
+  font-size: 1.0625rem;
+}
+
+.btn--sm {
+  min-height: 44px;
+  padding-inline: 1.1rem;
+  font-size: var(--fs-sm);
+}
+
+.btn .icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Текстовая ссылка со стрелкой */
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--accent);
+  border-radius: var(--r-xs);
+}
+
+.link-arrow .icon {
+  width: 18px;
+  height: 18px;
+  transition: transform var(--dur-2) var(--ease);
+}
+
+.link-arrow:hover .icon {
+  transform: translateX(3px);
+}
+
+/* ---------- Карточки ---------- */
+.card {
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: clamp(1.15rem, 1rem + 0.7vw, 1.75rem);
+}
+
+.card--soft {
+  background-color: var(--surface-alt);
+}
+
+.card--flat {
+  border-radius: var(--r-md);
+}
+
+.card--accent {
+  border-color: var(--accent-line);
+  background-color: var(--surface);
+}
+
+/* ---------- Чипы и бейджи ---------- */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.28rem 0.65rem;
+  border-radius: var(--r-pill);
+  background-color: var(--accent-soft);
+  color: var(--accent-soft-ink);
+  font-size: var(--fs-2xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.chip--muted {
+  background-color: var(--bg-tint);
+  color: var(--muted);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--r-pill);
+  background-color: var(--accent);
+  color: var(--accent-ink);
+  font-size: var(--fs-2xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+/* ---------- Цифры ---------- */
+.stat {
+  display: grid;
+  gap: 0.3rem;
+  align-content: start;
+}
+
+.stat__value {
+  font-family: var(--font-display);
+  font-size: var(--fs-stat);
+  font-weight: var(--display-weight);
+  line-height: 1;
+  letter-spacing: var(--display-ls);
+  color: var(--accent);
+  font-variant-numeric: lining-nums;
+}
+
+.stat__label {
+  font-size: var(--fs-sm);
+  line-height: 1.45;
+  color: var(--muted);
+  max-width: 18ch;
+}
+
+/* ---------- Выноска ---------- */
+.callout {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--r-md);
+  background-color: var(--surface);
+  font-size: var(--fs-sm);
+  line-height: 1.55;
+  color: var(--ink-2);
+}
+
+.callout__icon {
+  color: var(--accent);
+  margin-top: 1px;
+}
+
+/* ---------- Список с галочками ---------- */
+.checklist {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+
+.checklist .icon {
+  width: 18px;
+  height: 18px;
+  margin-top: 1px;
+  color: var(--accent);
+}
+
+/* ---------- Аккордеон ---------- */
+.faq {
+  border-top: 1px solid var(--line);
+}
+
+.faq__item {
+  border-bottom: 1px solid var(--line);
+}
+
+.faq__q {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding-block: 1.15rem;
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--font-text);
+  font-size: clamp(1rem, 0.97rem + 0.16vw, 1.0625rem);
+  font-weight: var(--fw-semibold);
+  line-height: 1.45;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  transition: color var(--dur-1) var(--ease);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.faq__q::-webkit-details-marker {
+  display: none;
+}
+
+.faq__q::marker {
+  content: "";
+}
+
+.faq__q:hover {
+  color: var(--accent);
+}
+
+.faq__icon {
+  position: relative;
+  flex: none;
+  width: 26px;
+  height: 26px;
+  margin-top: 1px;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  color: var(--accent);
+  transition: background-color var(--dur-2) var(--ease), border-color var(--dur-2) var(--ease),
+    color var(--dur-2) var(--ease);
+}
+
+.faq__icon::before,
+.faq__icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 9px;
+  height: 1.5px;
+  border-radius: 1px;
+  background-color: currentColor;
+  transform: translate(-50%, -50%);
+  transition: transform var(--dur-2) var(--ease), opacity var(--dur-2) var(--ease);
+}
+
+.faq__icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.faq__item[open] .faq__icon {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+}
+
+.faq__item[open] .faq__icon::after {
+  transform: translate(-50%, -50%) rotate(0deg);
+  opacity: 0;
+}
+
+.faq__panel {
+  height: 0;
+  overflow: hidden;
+  transition: height var(--dur-2) var(--ease);
+}
+
+.faq__panel-inner {
+  padding-bottom: 1.4rem;
+  max-width: 62ch;
+  color: var(--muted);
+  font-size: var(--fs-sm);
+  line-height: 1.6;
+}
+
+.faq__panel-inner p + p {
+  margin-top: 0.6rem;
+}
+
+/* ---------- Лайтбокс ---------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: var(--scrim);
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.lightbox::backdrop {
+  background-color: transparent;
+}
+
+.lightbox[open] {
+  display: flex;
+  flex-direction: column;
+  animation: lb-in var(--dur-2) var(--ease);
+}
+
+@keyframes lb-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.lightbox__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex: none;
+  padding: 0.75rem clamp(0.75rem, 3vw, 1.5rem);
+}
+
+.lightbox__counter {
+  font-size: var(--fs-xs);
+  letter-spacing: 0.1em;
+  font-variant-numeric: tabular-nums;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.lightbox__close,
+.lightbox__nav {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 50%;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.06);
+  transition: background-color var(--dur-1) var(--ease), border-color var(--dur-1) var(--ease);
+}
+
+.lightbox__close:hover,
+.lightbox__nav:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.lightbox__stage {
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  padding: 0 clamp(0.75rem, 3vw, 1.5rem);
+}
+
+.lightbox__figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+  max-height: 100%;
+  min-height: 0;
+}
+
+.lightbox__img {
+  display: block;
+  width: auto;
+  max-width: min(1040px, calc(100vw - 1.5rem));
+  max-height: calc(100dvh - 150px);
+  object-fit: contain;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: var(--shadow-lg);
+}
+
+.lightbox__caption {
+  font-size: var(--fs-xs);
+  line-height: 1.5;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 60ch;
+}
+
+.lightbox__nav--side {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .lightbox__nav--side {
+    display: grid;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .lightbox__nav--prev {
+    left: clamp(0.5rem, 2vw, 2rem);
+  }
+
+  .lightbox__nav--next {
+    right: clamp(0.5rem, 2vw, 2rem);
+  }
+
+  .lightbox__img {
+    max-width: calc(100vw - 200px);
+  }
+}
+
+.lightbox__foot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex: none;
+  padding: 0.75rem clamp(0.75rem, 3vw, 1.5rem) calc(1rem + env(safe-area-inset-bottom));
+}
+
+@media (min-width: 900px) {
+  .lightbox__foot {
+    display: none;
+  }
+}
+
+/* ---------- Встроенная форма Яндекс.Форм ---------- */
+.yform {
+  /* Компактная «вспомогательная» высота: пока форма грузится или недоступна,
+     блок не должен выглядеть пустым. Когда форма загрузилась, точную высоту
+     подставляет main.js по postMessage от forms.yandex.ru (embed.js не
+     подключается — он оставляет кадр 160px и обрезает поля). */
+  --yform-min: clamp(320px, 42vh, 420px);
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: stretch;
+  min-height: var(--yform-min);
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.yform iframe {
+  grid-area: 1 / 1;
+  display: block;
+  width: 100%;
+  min-height: var(--yform-min);
+  border: 0;
+  background-color: #ffffff;
+}
+
+@media (max-width: 639px) {
+  .yform {
+    padding: clamp(10px, 3vw, 14px) clamp(12px, 4vw, 16px);
+  }
+
+  .yform iframe {
+    border-radius: calc(var(--r-lg) - 4px);
+  }
+
+  .yform__skeleton,
+  .yform__fallback {
+    border-radius: calc(var(--r-lg) - 4px);
+  }
+}
+
+/* Скелетон: показывается только при включённом JS (класс .js на <html>) */
+.yform__skeleton {
+  display: none;
+  grid-area: 1 / 1;
+  position: relative;
+  z-index: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  min-height: var(--yform-min);
+  padding: var(--space-4);
+  background-color: var(--surface);
+  pointer-events: none;
+  transition: opacity var(--dur-2) var(--ease), visibility 0s linear var(--dur-2);
+}
+
+.js .yform__skeleton {
+  display: flex;
+}
+
+.yform.is-loaded .yform__skeleton,
+.yform.is-stalled .yform__skeleton,
+.yform.is-unavailable .yform__skeleton {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.yform__spinner {
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--line-strong);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: yform-spin 0.9s linear infinite;
+}
+
+@keyframes yform-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.yform__skeleton-text {
+  font-size: var(--fs-sm);
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+/* Резерв: если форма не загрузилась или страница открыта по file:// */
+.yform__fallback {
+  display: none;
+  grid-area: 1 / 1;
+  position: relative;
+  z-index: 2;
+  place-content: center;
+  justify-items: center;
+  gap: 0.5rem;
+  min-height: var(--yform-min);
+  padding: var(--space-4);
+  text-align: center;
+  background-color: color-mix(in srgb, var(--bg-tint) 42%, var(--surface));
+}
+
+.yform.is-stalled .yform__fallback,
+.yform.is-unavailable .yform__fallback {
+  display: grid;
+}
+
+/* В резервном режиме форма не занимает место — блок сжимается до карточки */
+.yform.is-stalled iframe,
+.yform.is-unavailable iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.yform__fallback-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  font-weight: var(--display-weight);
+  line-height: 1.25;
+  letter-spacing: var(--display-ls);
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+.yform__fallback-text {
+  max-width: 36ch;
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+  color: var(--muted);
+  text-wrap: pretty;
+}
+
+.yform__fallback-btn {
+  width: 100%;
+  max-width: 300px;
+  margin-top: 0.5rem;
+}
+
+.yform__fallback-call {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.yform__fallback-call:hover {
+  color: var(--accent-hover);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .yform__spinner {
+    animation: none;
+    border-top-color: var(--accent);
+    border-right-color: var(--accent);
+  }
+}
+
+/* ---------- Прочее ---------- */
+.prose {
+  display: grid;
+  gap: 1rem;
+  max-width: 72ch;
+}
+
+.prose h2 {
+  font-size: clamp(1.25rem, 1.1rem + 0.55vw, 1.5rem);
+  margin-top: var(--space-5);
+}
+
+.prose h3 {
+  font-size: 1.0625rem;
+  margin-top: var(--space-4);
+}
+
+.prose p,
+.prose li {
+  color: var(--ink-2);
+  line-height: 1.65;
+}
+
+.prose ul {
+  display: grid;
+  gap: 0.45rem;
+  padding-left: 1.2rem;
+  list-style: disc;
+}
+
+.prose li::marker {
+  color: var(--accent);
+}
+
+.prose a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.prose .note {
+  font-size: var(--fs-xs);
+}
+
+.note {
+  font-size: var(--fs-xs);
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.note a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.hr {
+  height: 1px;
+  border: 0;
+  background-color: var(--line);
+}
+
+/* Тонкая линия-акцент под заголовком */
+.rule {
+  width: 44px;
+  height: 2px;
+  background-color: var(--accent);
+  border-radius: 2px;
+}

@@ -1,0 +1,25 @@
+# Переводы строк: в репозитории всегда LF, без автоконвертации на Windows.
+* text=auto eol=lf
+
+# Текстовые файлы проекта — исходная кодировка UTF-8 без BOM (см. раздел
+# «Кодировка» в README). working-tree-encoding здесь не задаём: для файлов,
+# которые уже UTF-8, git добавляет BOM и портит кириллицу. Проверку кодировки
+# делает tools/fix-encoding.mjs --check.
+*.html text
+*.css  text
+*.js   text
+*.mjs  text
+*.md   text
+*.json text
+*.svg  text
+
+# Бинарные материалы не портить нормализацией.
+*.jpg binary
+*.png binary
+*.webp binary
+*.docx binary
+*.ico binary
+
+# Сгенерированные файлы: GitHub сворачивает их диффы, ревью читается чище.
+concepts/hero-*.html linguist-generated=true
+assets/img/diplomas/*.svg linguist-generated=true

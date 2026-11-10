@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-labelledby="og-title">
+  <title id="og-title">Татьяна Павловна — репетитор по русскому языку</title>
+
+  <defs>
+    <linearGradient id="og-bg" x1="0" y1="0" x2="1" y2="0.8">
+      <stop offset="0" stop-color="#fbf6ee"/>
+      <stop offset="1" stop-color="#efe2d1"/>
+    </linearGradient>
+    <linearGradient id="og-arch" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#f1e5d6"/>
+      <stop offset="1" stop-color="#e4d2bc"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#og-bg)"/>
+
+  <!-- Правая арка с монограммой -->
+  <path d="M828 630V292c0-128 88-216 186-216s186 88 186 216v338Z" fill="url(#og-arch)"/>
+  <text x="1014" y="404" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="136" font-weight="600" letter-spacing="4" fill="#a94e2e">ТП</text>
+  <path d="M936 444h156" stroke="#c9a98f" stroke-width="2"/>
+  <text x="1014" y="486" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="24" letter-spacing="1.5" fill="#6b6357">МПГУ · 1995</text>
+
+  <!-- Текстовая часть -->
+  <text x="90" y="126" font-family="'Segoe UI', Arial, sans-serif" font-size="22" font-weight="600" letter-spacing="3.4" fill="#a94e2e">РЕПЕТИТОР ПО РУССКОМУ ЯЗЫКУ</text>
+
+  <text x="86" y="242" font-family="Georgia, 'Times New Roman', serif" font-size="78" font-weight="600" letter-spacing="-1.5" fill="#17233a">Татьяна Павловна</text>
+
+  <rect x="90" y="282" width="96" height="6" rx="3" fill="#a94e2e"/>
+
+  <text x="90" y="352" font-family="'Segoe UI', Arial, sans-serif" font-size="31" fill="#2f3b50">5–11 классы · ЕГЭ и ОГЭ · Москва</text>
+
+  <text x="90" y="404" font-family="'Segoe UI', Arial, sans-serif" font-size="25" fill="#6b6357">Индивидуальные занятия без зубрёжки и страха перед экзаменом.</text>
+
+  <g font-family="'Segoe UI', Arial, sans-serif" font-size="23" font-weight="600" fill="#17233a">
+    <text x="90" y="530">30 лет практики</text>
+    <text x="330" y="530">800+ учеников</text>
+    <text x="556" y="530">первое занятие бесплатно</text>
+  </g>
+  <g fill="#a94e2e">
+    <circle cx="300" cy="522" r="4"/>
+    <circle cx="526" cy="522" r="4"/>
+  </g>
+
+  <!-- Тонкая рамка -->
+  <rect x="28" y="28" width="1144" height="574" rx="18" fill="none" stroke="#d9c6ae" stroke-width="2" opacity="0.7"/>
+</svg>
