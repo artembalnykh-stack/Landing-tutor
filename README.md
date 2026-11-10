@@ -123,7 +123,7 @@ grep -rn "TODO" index.html privacy.html # остались ли заглушки
 | Telegram | `index.html`, `t.me/username` |
 | Домен | `index.html`, `canonical` и `og:url` |
 | ID формы | `index.html`, `iframe src="forms.yandex.ru/u/..."` |
-| Портрет | `assets/img/teacher-portrait.jpg` — новый синтетический кадр 1402 × 1122, менять не требуется; реальное фото только с письменного согласия |
+| Портрет | `assets/img/teacher-portrait.jpg` — новый синтетический кадр 1402 × 1122; реальное фото только с письменного согласия |
 | Дипломы | `assets/img/diplomas/` — очищенные сканы вместо заглушек |
 | Реквизиты оператора | `privacy.html`, пропуски `[…]` |
 
