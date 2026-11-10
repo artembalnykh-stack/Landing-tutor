@@ -12,7 +12,7 @@
 
 ## Быстрый старт
 
-___
+https://landing-tutor.netlify.app/
 
 ## Что внутри
 
